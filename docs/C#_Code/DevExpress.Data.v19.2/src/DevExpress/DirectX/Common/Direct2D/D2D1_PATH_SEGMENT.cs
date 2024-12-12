@@ -1,0 +1,12 @@
+﻿namespace DevExpress.DirectX.Common.Direct2D
+{
+    using System;
+
+    public enum D2D1_PATH_SEGMENT
+    {
+        NONE,
+        FORCE_UNSTROKED,
+        FORCE_ROUND_LINE_JOIN
+    }
+}
+

@@ -1,0 +1,126 @@
+﻿namespace DevExpress.DirectX.StandardInterop.Direct3D
+{
+    using DevExpress.DirectX.Common.Direct3D;
+    using System;
+    using System.Runtime.InteropServices;
+
+    [ComImport, Guid("c0bfa96c-e089-44fb-8eaf-26f8796190da"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+    public interface ID3D11DeviceContext
+    {
+        void GetDevice();
+        void GetPrivateData();
+        void SetPrivateData();
+        void SetPrivateDataInterface();
+        void VSSetConstantBuffers();
+        void PSSetShaderResources();
+        void PSSetShader();
+        void PSSetSamplers();
+        void VSSetShader();
+        void DrawIndexed();
+        void Draw();
+        D3D11_MAPPED_SUBRESOURCE Map([In] ID3D11Resource pResource, [In] int subresource, [In] D3D11_MAP mapType, [In] D3D11_MAP_FLAG mapFlags);
+        [PreserveSig]
+        void Unmap([In] ID3D11Resource pResource, [In] int subresource);
+        void PSSetConstantBuffers();
+        void IASetInputLayout();
+        void IASetVertexBuffers();
+        void IASetIndexBuffer();
+        void DrawIndexedInstanced();
+        void DrawInstanced();
+        void GSSetConstantBuffers();
+        void GSSetShader();
+        void IASetPrimitiveTopology();
+        void VSSetShaderResources();
+        void VSSetSamplers();
+        void Begin();
+        void End();
+        void GetData();
+        void SetPredication();
+        void GSSetShaderResources();
+        void GSSetSamplers();
+        void OMSetRenderTargets();
+        void OMSetRenderTargetsAndUnorderedAccessViews();
+        void OMSetBlendState();
+        void OMSetDepthStencilState();
+        void SOSetTargets();
+        void DrawAuto();
+        void DrawIndexedInstancedIndirect();
+        void DrawInstancedIndirect();
+        void Dispatch();
+        void DispatchIndirect();
+        void RSSetState();
+        void RSSetViewports();
+        void RSSetScissorRects();
+        void CopySubresourceRegion();
+        [PreserveSig]
+        void CopyResource([In] ID3D11Texture2D pDstResource, [In] ID3D11Texture2D pSrcResource);
+        void UpdateSubresource();
+        void CopyStructureCount();
+        void ClearRenderTargetView();
+        void ClearUnorderedAccessViewUint();
+        void ClearUnorderedAccessViewFloat();
+        void ClearDepthStencilView();
+        void GenerateMips();
+        void SetResourceMinLOD();
+        void GetResourceMinLOD();
+        void ResolveSubresource();
+        void ExecuteCommandList();
+        void HSSetShaderResources();
+        void HSSetShader();
+        void HSSetSamplers();
+        void HSSetConstantBuffers();
+        void DSSetShaderResources();
+        void DSSetShader();
+        void DSSetSamplers();
+        void DSSetConstantBuffers();
+        void CSSetShaderResources();
+        void CSSetUnorderedAccessViews();
+        void CSSetShader();
+        void CSSetSamplers();
+        void CSSetConstantBuffers();
+        void VSGetConstantBuffers();
+        void PSGetShaderResources();
+        void PSGetShader();
+        void PSGetSamplers();
+        void VSGetShader();
+        void PSGetConstantBuffers();
+        void IAGetInputLayout();
+        void IAGetVertexBuffers();
+        void IAGetIndexBuffer();
+        void GSGetConstantBuffers();
+        void GSGetShader();
+        void IAGetPrimitiveTopology();
+        void VSGetShaderResources();
+        void VSGetSamplers();
+        void GetPredication();
+        void GSGetShaderResources();
+        void GSGetSamplers();
+        void OMGetRenderTargets();
+        void OMGetRenderTargetsAndUnorderedAccessViews();
+        void OMGetBlendState();
+        void OMGetDepthStencilState();
+        void SOGetTargets();
+        void RSGetState();
+        void RSGetViewports();
+        void RSGetScissorRects();
+        void HSGetShaderResources();
+        void HSGetShader();
+        void HSGetSamplers();
+        void HSGetConstantBuffers();
+        void DSGetShaderResources();
+        void DSGetShader();
+        void DSGetSamplers();
+        void DSGetConstantBuffers();
+        void CSGetShaderResources();
+        void CSGetUnorderedAccessViews();
+        void CSGetShader();
+        void CSGetSamplers();
+        void CSGetConstantBuffers();
+        void ClearState();
+        void Flush();
+        void GetType();
+        void GetContextFlags();
+        void FinishCommandList();
+    }
+}
+

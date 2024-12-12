@@ -1,0 +1,56 @@
+﻿namespace DevExpress.Xpf.Bars.Themes
+{
+    using System;
+
+    public enum BarSubItemThemeKeys
+    {
+        public const BarSubItemThemeKeys Template = BarSubItemThemeKeys.Template;,
+        public const BarSubItemThemeKeys InMenuTemplate = BarSubItemThemeKeys.InMenuTemplate;,
+        public const BarSubItemThemeKeys InMenuHorizontalTemplate = BarSubItemThemeKeys.InMenuHorizontalTemplate;,
+        public const BarSubItemThemeKeys InRibbonPageGroupTemplate = BarSubItemThemeKeys.InRibbonPageGroupTemplate;,
+        public const BarSubItemThemeKeys ArrowStyle = BarSubItemThemeKeys.ArrowStyle;,
+        public const BarSubItemThemeKeys ArrowTemplate = BarSubItemThemeKeys.ArrowTemplate;,
+        public const BarSubItemThemeKeys ArrowStyleInStatusBar = BarSubItemThemeKeys.ArrowStyleInStatusBar;,
+        public const BarSubItemThemeKeys ArrowTemplateInStatusBar = BarSubItemThemeKeys.ArrowTemplateInStatusBar;,
+        public const BarSubItemThemeKeys ArrowStyleInMainMenu = BarSubItemThemeKeys.ArrowStyleInMainMenu;,
+        public const BarSubItemThemeKeys ArrowTemplateInMainMenu = BarSubItemThemeKeys.ArrowTemplateInMainMenu;,
+        public const BarSubItemThemeKeys ArrowStyleInMenu = BarSubItemThemeKeys.ArrowStyleInMenu;,
+        public const BarSubItemThemeKeys ArrowTemplateInMenu = BarSubItemThemeKeys.ArrowTemplateInMenu;,
+        public const BarSubItemThemeKeys ContentToArrowIndent = BarSubItemThemeKeys.ContentToArrowIndent;,
+        public const BarSubItemThemeKeys ArrowStyleInRibbonQuickAccessToolbarFooter = BarSubItemThemeKeys.ArrowStyleInRibbonQuickAccessToolbarFooter;,
+        public const BarSubItemThemeKeys ArrowStyleInRibbonStatusBarLeft = BarSubItemThemeKeys.ArrowStyleInRibbonStatusBarLeft;,
+        public const BarSubItemThemeKeys ArrowStyleInRibbonStatusBarRight = BarSubItemThemeKeys.ArrowStyleInRibbonStatusBarRight;,
+        public const BarSubItemThemeKeys ArrowStyleInRibbonPageGroup = BarSubItemThemeKeys.ArrowStyleInRibbonPageGroup;,
+        public const BarSubItemThemeKeys ArrowStyleInRibbonPageHeader = BarSubItemThemeKeys.ArrowStyleInRibbonPageHeader;,
+        public const BarSubItemThemeKeys ArrowStyleInRibbonQuickAccessToolbar = BarSubItemThemeKeys.ArrowStyleInRibbonQuickAccessToolbar;,
+        public const BarSubItemThemeKeys ArrowStyleInBarButtonGroup = BarSubItemThemeKeys.ArrowStyleInBarButtonGroup;,
+        public const BarSubItemThemeKeys ArrowTemplateInRibbonQuickAccessToolbarFooter = BarSubItemThemeKeys.ArrowTemplateInRibbonQuickAccessToolbarFooter;,
+        public const BarSubItemThemeKeys ArrowTemplateInRibbonStatusBarLeft = BarSubItemThemeKeys.ArrowTemplateInRibbonStatusBarLeft;,
+        public const BarSubItemThemeKeys ArrowTemplateInRibbonStatusBarRight = BarSubItemThemeKeys.ArrowTemplateInRibbonStatusBarRight;,
+        public const BarSubItemThemeKeys ArrowTemplateInRibbonPageGroup = BarSubItemThemeKeys.ArrowTemplateInRibbonPageGroup;,
+        public const BarSubItemThemeKeys ArrowTemplateInRibbonPageHeader = BarSubItemThemeKeys.ArrowTemplateInRibbonPageHeader;,
+        public const BarSubItemThemeKeys ArrowTemplateInRibbonQuickAccessToolbar = BarSubItemThemeKeys.ArrowTemplateInRibbonQuickAccessToolbar;,
+        public const BarSubItemThemeKeys ArrowTemplateInBarButtonGroup = BarSubItemThemeKeys.ArrowTemplateInBarButtonGroup;,
+        public const BarSubItemThemeKeys TextSplitterStyleInRibbonPageGroup = BarSubItemThemeKeys.TextSplitterStyleInRibbonPageGroup;,
+        public const BarSubItemThemeKeys NormalArrowTemplateInTextSplitter = BarSubItemThemeKeys.NormalArrowTemplateInTextSplitter;,
+        public const BarSubItemThemeKeys SelectedArrowTemplateInTextSplitter = BarSubItemThemeKeys.SelectedArrowTemplateInTextSplitter;,
+        public const BarSubItemThemeKeys SelectedTextStyleInTextSplitter = BarSubItemThemeKeys.SelectedTextStyleInTextSplitter;,
+        public const BarSubItemThemeKeys NormalTextStyleInTextSplitter = BarSubItemThemeKeys.NormalTextStyleInTextSplitter;,
+        public const BarSubItemThemeKeys BottomSideArrowContainerStyleInTextSplitter = BarSubItemThemeKeys.BottomSideArrowContainerStyleInTextSplitter;,
+        public const BarSubItemThemeKeys RightSideArrowContainerStyleInTextSplitter = BarSubItemThemeKeys.RightSideArrowContainerStyleInTextSplitter;,
+        public const BarSubItemThemeKeys LayoutPanelStyle = BarSubItemThemeKeys.LayoutPanelStyle;,
+        public const BarSubItemThemeKeys LayoutPanelStyleInMainMenu = BarSubItemThemeKeys.LayoutPanelStyleInMainMenu;,
+        public const BarSubItemThemeKeys LayoutPanelStyleInStatusBar = BarSubItemThemeKeys.LayoutPanelStyleInStatusBar;,
+        public const BarSubItemThemeKeys LayoutPanelStyleInRibbonPageGroup = BarSubItemThemeKeys.LayoutPanelStyleInRibbonPageGroup;,
+        public const BarSubItemThemeKeys LayoutPanelStyleInRibbonToolbar = BarSubItemThemeKeys.LayoutPanelStyleInRibbonToolbar;,
+        public const BarSubItemThemeKeys LayoutPanelStyleInRibbonToolbarFooter = BarSubItemThemeKeys.LayoutPanelStyleInRibbonToolbarFooter;,
+        public const BarSubItemThemeKeys LayoutPanelStyleInRibbonPageHeader = BarSubItemThemeKeys.LayoutPanelStyleInRibbonPageHeader;,
+        public const BarSubItemThemeKeys LayoutPanelStyleInRibbonStatusBarLeft = BarSubItemThemeKeys.LayoutPanelStyleInRibbonStatusBarLeft;,
+        public const BarSubItemThemeKeys LayoutPanelStyleInRibbonStatusBarRight = BarSubItemThemeKeys.LayoutPanelStyleInRibbonStatusBarRight;,
+        public const BarSubItemThemeKeys LayoutPanelStyleInButtonGroup = BarSubItemThemeKeys.LayoutPanelStyleInButtonGroup;,
+        public const BarSubItemThemeKeys GlyphBorderStyle = BarSubItemThemeKeys.GlyphBorderStyle;,
+        public const BarSubItemThemeKeys ContentMargin = BarSubItemThemeKeys.ContentMargin;,
+        public const BarSubItemThemeKeys ControlTemplateInRadialMenu = BarSubItemThemeKeys.ControlTemplateInRadialMenu;
+    }
+}
+

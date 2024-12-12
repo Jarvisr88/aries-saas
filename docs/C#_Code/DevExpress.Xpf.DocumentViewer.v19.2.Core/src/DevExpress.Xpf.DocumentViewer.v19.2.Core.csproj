@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>d345ffc7-00d9-4595-ba8a-9c0971dd8e0d</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>DevExpress.Xpf.DocumentViewer.v19.2.Core</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Xaml" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="DevExpress.Data.v19.2" />
+    <Reference Include="System" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="DevExpress.Mvvm.v19.2" />
+    <Reference Include="DevExpress.Xpf.Core.v19.2" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="DevExpress.Xpf.Ribbon.v19.2" />
+    <Reference Include="DevExpress.Xpf.Grid.v19.2" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="DevExpress.Xpf.Grid.v19.2.Core" />
+    <Compile Include="Global.cs" />
+    <Compile Include="DevExpress\Xpf\Controls\LocalizationRes.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\ZoomHelper.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\ZoomChangedEventArgs.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\RotateAngleChangedEventArgs.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\PageIndexChangedEventArgs.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\BehaviorProvider.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\CommandWrapper.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\CommandBase.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\CommandProvider.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\UriHelper.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\TextEditEditValueChangedConverter.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\PaginationEditValueChangedBehavior.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\CommandButton.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\CommandToggleButton.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\CommandCheckItems.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\CommandSetZoomFactorAndModeItem.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\CommandPagination.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\DocumentViewerBarButtonItem.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\DocumentViewerBarSubItem.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\SearchBarButtonItem.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\SearchBarButtonItemLink.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\SearchBarButtonItemLinkControl.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\SearchBarButtonItemLayoutPanelThemeKeyExtension.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\SearchBarButtonItemItemBorderThemeKeyExtension.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\SearchBarSubItem.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\SearchBarSubItemLink.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\SearchBarSubItemLinkControl.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\SearchBarSubItemLayoutPanelThemeKeyExtension.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\SearchBarSubItemItemBorderThemeKeyExtension.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\SearchBarStaticItem.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\SearchBarStaticItemLink.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\SearchBarStaticItemLinkControl.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\SearchBarStaticItemLayoutPanelThemeKeyExtension.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\SearchBarStaticItemItemBorderThemeKeyExtension.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\DefaultBarManagerItemNames.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\OpenDocumentBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\CloseDocumentBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\PreviousPageBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\NextPageBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\PaginationBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\PaginationItemLinkControlBaseAutomationPeer.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\PaginationBarItemLink.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\PaginationItemLinkControlBarAutomationPeer.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\PaginationBarItemLinkControl.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\PaginationBarItemLinkControlStrategy.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\PaginationRibbonItem.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\PaginationRibbonItemLink.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\PaginationItemLinkControlRibbonAutomationPeer.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\PaginationRibbonItemLinkControl.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\PaginationRibbonItemLinkControlStrategy.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\ZoomInBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\ZoomOutBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\ZoomBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\ShowOptionsBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\ClockwiseRotateBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\CounterClockwiseRotateBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\PreviousViewBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\NextViewBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\BarManagerActionAttachedBehavior.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\DocumentViewerRibbonController.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\RibbonControlActionAttachedBehavior.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\CheckBarItemTemplateSelector.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\UriToBitmapImageConverterExtension.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\DocumentMapCommands.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\DocumentMapControl.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\MouseEventArgsToDataRowConverter.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\DocumentMapItem.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\DocumentMapSettings.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\PageDisplayMode.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\DocumentPresenterControl.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\DocumentPresenterDecorator.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\ScrollCommand.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\ZoomMode.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\CommandBarStyle.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\DocumentViewerControl.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\PropertyProvider.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\DocumentViewerResourceExtension.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\DocumentViewerItemsControl.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\DocumentViewerInfiniteHeightException.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\ScrollIntoViewMode.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\IndexCalculator.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\DocumentViewerPanel.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\DXScrollViewer.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\IDocumentViewerControl.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\IPage.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\IDocument.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\IDocumentMapItem.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\KeyboardAndMouseController.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\DocumentViewerStringId.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\DocumentViewerLocalizer.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\DocumentViewerControlResXLocalizer.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\DocumentViewerControlLocalizedStringExtension.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\DocumentViewerRenderer.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\NavigationStrategy.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\PositionCalculator.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\PageWrapper.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\PageControl.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\PageControlItemPosition.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\PageControlPanel.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\PageControlItem.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\SearchControlContainer.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\TextSearchDirection.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\TextSearchParameter.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\TouchController.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\UndoActionType.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\UndoState.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\NavigationState.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\UndoRedoManager.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\Themes\DocumentViewerThemeKeys.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\Themes\DocumentViewerThemeKeyExtension.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\Properties\Resources.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\Properties\Settings.cs" />
+    <Compile Include="DevExpress\Xpf\DocumentViewer\Extensions\IEnumerableExtensions.cs" />
+    <EmbeddedResource Include="DevExpress.Xpf.DocumentViewer.v19.2.Core.g.resources" />
+    <EmbeddedResource Include="DevExpress.Xpf.DocumentViewer.Properties.Resources.resources" />
+    <EmbeddedResource Include="DevExpress.Xpf.DocumentViewer.LocalizationRes.resources" />
+  </ItemGroup>
+</Project>

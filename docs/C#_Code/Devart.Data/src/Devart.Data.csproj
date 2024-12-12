@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>c8e09afe-43c1-462a-9d0e-e2582dda380b</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>Devart.Data</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Devart\DbMonitor\o.cs" />
+    <Compile Include="Devart\DbMonitor\m.cs" />
+    <Compile Include="Devart\DbMonitor\g.cs" />
+    <Compile Include="Devart\DbMonitor\f.cs" />
+    <Compile Include="Devart\Common\TokenType.cs" />
+    <Compile Include="Devart\Common\Token.cs" />
+    <Compile Include="Devart\Common\j.cs" />
+    <Compile Include="Devart\Common\LexerBehavior.cs" />
+    <Compile Include="Devart\Common\Lexer.cs" />
+    <Compile Include="Devart\Common\GetSymbolsHandler.cs" />
+    <Compile Include="Devart\Common\CommonLexem.cs" />
+    <Compile Include="Devart\Common\y.cs" />
+    <Compile Include="Devart\Common\Utils.cs" />
+    <Compile Include="Devart\Common\g.cs" />
+    <Compile Include="Devart\Common\u.cs" />
+    <Compile Include="Devart\Common\DbMonitor.cs" />
+    <Compile Include="Devart\Common\m.cs" />
+    <Compile Include="Devart\Common\MonitorEventHandler.cs" />
+    <Compile Include="Devart\Common\MonitorEventArgs.cs" />
+    <Compile Include="Devart\Common\MonitorTracePoint.cs" />
+    <Compile Include="Devart\Common\c.cs" />
+    <Compile Include="Devart\DbMonitor\c.cs" />
+    <Compile Include="Devart\DbMonitor\b.cs" />
+    <Compile Include="Devart\DbMonitor\d.cs" />
+    <Compile Include="Devart\DbMonitor\j.cs" />
+    <Compile Include="Devart\DbMonitor\n.cs" />
+    <Compile Include="Devart\Common\MonitorEventType.cs" />
+    <Compile Include="Devart\Common\p.cs" />
+    <Compile Include="Devart\Common\i.cs" />
+    <Compile Include="Devart\Common\DbCommandBase.cs" />
+    <Compile Include="Devart\Common\DbCommandBuilder.cs" />
+    <Compile Include="Devart\Common\DbParameterBase.cs" />
+    <Compile Include="Devart\Common\QueryRecordCountException.cs" />
+    <Compile Include="Devart\Common\GlobalComponentsCache.cs" />
+    <Compile Include="Devart\Common\ILocalFailoverManager.cs" />
+    <Compile Include="Devart\Common\RetryMode.cs" />
+    <Compile Include="Devart\Common\ConnectionLostCause.cs" />
+    <Compile Include="Devart\Common\DbCommandBuilderBase.cs" />
+    <Compile Include="Devart\Common\RefreshRowMode.cs" />
+    <Compile Include="Devart\Common\DbConnectionStringBuilder.cs" />
+    <Compile Include="Devart\Common\l.cs" />
+    <Compile Include="Devart\Common\n.cs" />
+    <Compile Include="Devart\Common\DbDataAdapter.cs" />
+    <Compile Include="Devart\Common\DbDataReaderBase.cs" />
+    <Compile Include="Devart\Common\DbDataSourceEnumerator.cs" />
+    <Compile Include="Devart\Common\aa.cs" />
+    <Compile Include="Devart\Common\k.cs" />
+    <Compile Include="Devart\Common\DbProviderException.cs" />
+    <Compile Include="Devart\Common\DbLoader.cs" />
+    <Compile Include="Devart\Common\DbLoaderColumnCollection.cs" />
+    <Compile Include="Devart\Common\DbLoaderColumn.cs" />
+    <Compile Include="Devart\Common\DbParameterBaseCollection.cs" />
+    <Compile Include="Devart\Common\DbScript.cs" />
+    <Compile Include="Devart\Common\SqlStatementCollection.cs" />
+    <Compile Include="Devart\Common\ScriptErrorEventHandler.cs" />
+    <Compile Include="Devart\Common\ScriptProgressEventHandler.cs" />
+    <Compile Include="Devart\Common\SqlStatement.cs" />
+    <Compile Include="Devart\Common\SqlStatementType.cs" />
+    <Compile Include="Devart\Common\ScriptErrorEventArgs.cs" />
+    <Compile Include="Devart\Common\SqlStatementStatus.cs" />
+    <Compile Include="Devart\Common\ScriptProgressEventArgs.cs" />
+    <Compile Include="Devart\Common\DataViewManagerPropertyDescriptor.cs" />
+    <Compile Include="Devart\Common\DbDataTable.cs" />
+    <Compile Include="Devart\Common\s.cs" />
+    <Compile Include="Devart\Common\d.cs" />
+    <Compile Include="Devart\Common\DbDataRowView.cs" />
+    <Compile Include="Devart\Common\DbDataTableView.cs" />
+    <Compile Include="Devart\Common\w.cs" />
+    <Compile Include="Devart\Common\DbDataSet.cs" />
+    <Compile Include="Devart\Common\x.cs" />
+    <Compile Include="Devart\Common\DataSetToolboxItem.cs" />
+    <Compile Include="Devart\Common\z.cs" />
+    <Compile Include="Devart\Common\ParentDataRelation.cs" />
+    <Compile Include="Devart\Common\o.cs" />
+    <Compile Include="Devart\Data\DataLink.cs" />
+    <Compile Include="Devart\Common\r.cs" />
+    <Compile Include="Devart\Common\f.cs" />
+    <Compile Include="Devart\Common\q.cs" />
+    <Compile Include="Devart\Common\e.cs" />
+    <Compile Include="Devart\Common\ComponentAddedEventHandler.cs" />
+    <Compile Include="Devart\Common\ComponentRemovedEventHandler.cs" />
+    <Compile Include="Devart\Common\ConnectionLostContext.cs" />
+    <Compile Include="Devart\Common\ConnectionLostEventArgs.cs" />
+    <Compile Include="Devart\Common\ConnectionLostEventHandler.cs" />
+    <Compile Include="Devart\Common\h.cs" />
+    <Compile Include="Devart\Common\DumpMode.cs" />
+    <Compile Include="Devart\Common\DbDump.cs" />
+    <Compile Include="Devart\Common\DbTransactionBase.cs" />
+    <Compile Include="Devart\Common\TransactionStateChangingEventHandler.cs" />
+    <Compile Include="Devart\Common\TransactionStateChangedEventHandler.cs" />
+    <Compile Include="Devart\Common\TransactionAction.cs" />
+    <Compile Include="Devart\Common\TransactionStateChangingEventArgs.cs" />
+    <Compile Include="Devart\Common\TransactionStateChangedEventArgs.cs" />
+    <Compile Include="Devart\Common\TransactionStateChangeEventArgs.cs" />
+    <Compile Include="Devart\Common\ProxyOptions.cs" />
+    <Compile Include="Devart\Common\ProxyOptionsPropertyChanged.cs" />
+    <Compile Include="Devart\Common\b.cs" />
+    <Compile Include="Devart\Common\ProxyException.cs" />
+    <Compile Include="Devart\Data\ProductInfo.cs" />
+    <Compile Include="Devart\Data\DataLinkToolboxItem.cs" />
+    <Compile Include="Devart\DbMonitor\e.cs" />
+    <Compile Include="Devart\DbMonitor\h.cs" />
+    <Compile Include="Devart\DbMonitor\p.cs" />
+    <Compile Include="Devart\DbMonitor\i.cs" />
+    <Compile Include="Devart\DbMonitor\a.cs" />
+    <Compile Include="Devart\DbMonitor\l.cs" />
+    <Compile Include="Devart\DbMonitor\k.cs" />
+    <EmbeddedResource Include="Devart.Data.Common.resources" />
+    <EmbeddedResource Include="Devart.Common.DbCommandBase.resources" />
+    <EmbeddedResource Include="Devart.Common.DbScript.resources" />
+    <EmbeddedResource Include="Devart.Data.DataLink.bmp" />
+  </ItemGroup>
+</Project>

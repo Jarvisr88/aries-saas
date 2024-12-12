@@ -1,0 +1,547 @@
+﻿namespace DevExpress.Xpf.Docking
+{
+    using DevExpress.Mvvm.Native;
+    using DevExpress.Xpf.Core.Native;
+    using DevExpress.Xpf.Docking.Base;
+    using DevExpress.Xpf.Docking.Internal;
+    using DevExpress.Xpf.Docking.Platform;
+    using DevExpress.Xpf.Layout.Core;
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.Linq;
+    using System.Runtime.CompilerServices;
+    using System.Runtime.InteropServices;
+    using System.Windows;
+    using System.Windows.Controls;
+
+    public static class DockControllerHelper
+    {
+        public static readonly DependencyProperty ClosingBehaviorProperty = DependencyProperty.RegisterAttached("ClosingBehavior", typeof(ClosingBehavior), typeof(DockControllerHelper), new PropertyMetadata(ClosingBehavior.Default));
+        [IgnoreDependencyPropertiesConsistencyChecker]
+        internal static readonly DependencyProperty ForceSizeUpdateProperty = DependencyProperty.RegisterAttached("ForceSizeUpdate", typeof(bool), typeof(DockControllerHelper));
+
+        public static AutoHideGroup BoxIntoAutoHideGroup(BaseLayoutItem item, Dock type, DockLayoutManager manager)
+        {
+            AutoHideGroup newGroup = manager.GenerateGroup<AutoHideGroup>();
+            newGroup.BeginInit();
+            newGroup.DockLayoutManagerCore = manager;
+            newGroup.DockType = type;
+            if (item != null)
+            {
+                IEnumerable<LayoutGroup> enumerable;
+                PlaceHolderHelper.DecomposeTo(item, newGroup, out enumerable);
+                enumerable.ForEach<LayoutGroup>(delegate (LayoutGroup x) {
+                    if (x.ShouldStayInTree())
+                    {
+                        manager.DecomposedItems.AddOnce(x);
+                    }
+                });
+                if (item is LayoutGroup)
+                {
+                    AutoHideGroup.SetAutoHideType(newGroup, AutoHideGroup.GetAutoHideType(item));
+                }
+                ClearSize(item, false);
+            }
+            newGroup.EndInit();
+            return newGroup;
+        }
+
+        public static DocumentGroup BoxIntoDocumentGroup(BaseLayoutItem item, DockLayoutManager manager)
+        {
+            DocumentGroup group = manager.GenerateGroup<DocumentGroup>();
+            group.BeginInit();
+            group.DockLayoutManagerCore = manager;
+            DecomposeAndBoxIntoGroup(item, group);
+            object objA = item.GetValue(DocumentGroup.LastClosePageButtonShowModeInternalProperty);
+            if (!Equals(objA, ClosePageButtonShowMode.Default))
+            {
+                group.ClosePageButtonShowMode = (ClosePageButtonShowMode) objA;
+            }
+            group.EndInit();
+            return group;
+        }
+
+        public static LayoutGroup BoxIntoDocumentHost(BaseLayoutItem item, DockLayoutManager manager)
+        {
+            LayoutGroup group = manager.GenerateGroup<LayoutGroup>();
+            DocumentGroup group2 = manager.GenerateGroup<DocumentGroup>();
+            group.BeginInit();
+            group2.BeginInit();
+            group.DockLayoutManagerCore = manager;
+            group2.DockLayoutManagerCore = manager;
+            DecomposeAndBoxIntoGroup(item, group2);
+            object objA = item.GetValue(DocumentGroup.LastClosePageButtonShowModeInternalProperty);
+            if (!Equals(objA, ClosePageButtonShowMode.Default))
+            {
+                group2.ClosePageButtonShowMode = (ClosePageButtonShowMode) objA;
+            }
+            group.Add(group2);
+            group2.EndInit();
+            group.EndInit();
+            return group;
+        }
+
+        public static FloatGroup BoxIntoFloatGroup(BaseLayoutItem item, DockLayoutManager manager)
+        {
+            FloatGroup group = manager.GenerateGroup<FloatGroup>();
+            group.BeginInit();
+            group.DockLayoutManagerCore = manager;
+            group.Items.Add(item);
+            group.FitSizeToContent(MathHelper.IsEmpty(item.FloatSize) ? item.GetSize() : item.FloatSize);
+            group.EndInit();
+            ClearSize(item, true);
+            return group;
+        }
+
+        internal static FloatGroup BoxIntoFloatGroup(DockLayoutManager container, BaseLayoutItem item, Rect floatingBounds)
+        {
+            FloatGroup group = container.GenerateGroup<FloatGroup>();
+            group.BeginInit();
+            group.DockLayoutManagerCore = container;
+            group.Items.Add(item);
+            group.FitSizeToContent(floatingBounds.Size);
+            group.FloatLocation = floatingBounds.Location;
+            group.EndInit();
+            ClearSize(item, true);
+            return group;
+        }
+
+        public static LayoutGroup BoxIntoGroup(BaseLayoutItem[] items, Orientation orientation)
+        {
+            LayoutGroup group1 = new LayoutGroup();
+            group1.IsAutoGenerated = true;
+            LayoutGroup group = group1;
+            group.BeginInit();
+            group.GroupBorderStyle = GroupBorderStyle.Group;
+            group.Orientation = orientation;
+            group.EndInit();
+            BoxIntoGroupCore(items, group);
+            return group;
+        }
+
+        public static LayoutGroup BoxIntoGroup(BaseLayoutItem item, Orientation orientation, DockLayoutManager manager)
+        {
+            LayoutGroup group = manager.GenerateGroup<LayoutGroup>();
+            group.DockLayoutManagerCore = manager;
+            group.BeginInit();
+            group.Orientation = orientation;
+            group.EndInit();
+            BoxIntoGroupCore(item, group);
+            return group;
+        }
+
+        public static LayoutGroup BoxIntoGroup(BaseLayoutItem[] items, Orientation orientation, DockLayoutManager manager)
+        {
+            LayoutGroup group = manager.GenerateGroup<LayoutGroup>();
+            group.BeginInit();
+            group.GroupBorderStyle = GroupBorderStyle.Group;
+            group.Orientation = orientation;
+            group.EndInit();
+            BoxIntoGroupCore(items, group);
+            return group;
+        }
+
+        public static LayoutGroup BoxIntoGroup(BaseLayoutItem item, Orientation orientation, bool allowSplitters, DockLayoutManager manager)
+        {
+            LayoutGroup element = BoxIntoGroup(item, orientation, manager);
+            if (!DesignerProperties.GetIsInDesignMode(element))
+            {
+                element.AllowSplitters = new bool?(allowSplitters);
+            }
+            return element;
+        }
+
+        private static void BoxIntoGroupCore(BaseLayoutItem[] items, LayoutGroup group)
+        {
+            group.ItemHeight = items[0].ItemHeight;
+            group.ItemWidth = items[0].ItemWidth;
+            group.AddRange(items);
+        }
+
+        private static void BoxIntoGroupCore(BaseLayoutItem item, LayoutGroup group)
+        {
+            group.ItemWidth = item.ItemWidth;
+            group.ItemHeight = item.ItemHeight;
+            ClearSize(item, false);
+            group.Items.Add(item);
+        }
+
+        public static TabbedGroup BoxIntoTabbedGroup(BaseLayoutItem item, DockLayoutManager manager)
+        {
+            TabbedGroup group = manager.GenerateGroup<TabbedGroup>();
+            group.BeginInit();
+            BoxIntoGroupCore(item, group);
+            group.EndInit();
+            return group;
+        }
+
+        private static bool CanUnbox(LayoutGroup group, LayoutGroup nestedGroup) => 
+            (nestedGroup != null) ? !((nestedGroup.IsPermanent || nestedGroup.IsControlItemsHost) || (nestedGroup is TabbedGroup)) : false;
+
+        public static bool CanUnboxGroupWithSingleItem(LayoutGroup group, DockLayoutManager manager, bool hasPlaceHolders)
+        {
+            LayoutGroup parent = group.Parent;
+            if ((!group.IsFloating || (group.ItemType == LayoutItemType.TabPanelGroup)) && (hasPlaceHolders || ((parent != null) && parent.HasPlaceHolders)))
+            {
+                return false;
+            }
+            bool flag = group.IsFloatingRootItem && (manager.FloatingDocumentContainer == FloatingDocumentContainer.DocumentHost);
+            if ((group is DocumentGroup) && (!group.IsFloatingRootItem | flag))
+            {
+                return false;
+            }
+            BaseLayoutItem item = group.Items[0];
+            return (!(item is LayoutControlItem) && !((item is DocumentGroup) & flag));
+        }
+
+        public static bool CheckHideView(DockLayoutManager container, LayoutGroup group)
+        {
+            if (container == null)
+            {
+                return false;
+            }
+            bool flag = group is AutoHideGroup;
+            if (flag)
+            {
+                container.HideView(group);
+            }
+            return flag;
+        }
+
+        public static bool CheckUpdateView(DockLayoutManager container, LayoutGroup group)
+        {
+            if (container == null)
+            {
+                return false;
+            }
+            bool flag = (group is FloatGroup) || (group is AutoHideGroup);
+            if (flag)
+            {
+                container.InvalidateView(group);
+            }
+            return flag;
+        }
+
+        private static void ClearSize(BaseLayoutItem item, bool force = false)
+        {
+            if (force)
+            {
+                if (!item.ItemWidth.IsStar)
+                {
+                    item.ClearValue(BaseLayoutItem.ItemWidthProperty);
+                }
+                if (!item.ItemHeight.IsStar)
+                {
+                    item.ClearValue(BaseLayoutItem.ItemHeightProperty);
+                }
+            }
+        }
+
+        public static T CreateCommand<T>(DockLayoutManager container, BaseLayoutItem item) where T: DockControllerCommand, new()
+        {
+            IDockController dockController = GetDockController(container);
+            if (dockController != null)
+            {
+                return dockController.CreateCommand<T>(item);
+            }
+            return default(T);
+        }
+
+        public static BaseLayoutItem[] Decompose(BaseLayoutItem item)
+        {
+            DockLayoutManager container = item.GetRoot().GetDockLayoutManager();
+            List<BaseLayoutItem> panels = new List<BaseLayoutItem>();
+            List<BaseLayoutItem> items = new List<BaseLayoutItem>();
+            List<LayoutGroup> parents = new List<LayoutGroup>();
+            item.Accept(delegate (BaseLayoutItem i) {
+                items.Add(i);
+                if (i is LayoutPanel)
+                {
+                    panels.Add(i);
+                }
+                if (i is LayoutGroup)
+                {
+                    parents.Add((LayoutGroup) i);
+                }
+            });
+            foreach (BaseLayoutItem item2 in items)
+            {
+                if (item2.Parent != null)
+                {
+                    item2.Parent.Remove(item2);
+                }
+            }
+            if (container != null)
+            {
+                parents.ForEach(delegate (LayoutGroup x) {
+                    if (x.ShouldStayInTree())
+                    {
+                        container.DecomposedItems.AddOnce(x);
+                    }
+                });
+            }
+            return panels.ToArray();
+        }
+
+        private static void DecomposeAndBoxIntoGroup(BaseLayoutItem item, LayoutGroup group)
+        {
+            group.ItemWidth = item.ItemWidth;
+            group.ItemHeight = item.ItemHeight;
+            ClearSize(item, false);
+            group.AddRange(Decompose(item));
+        }
+
+        internal static ClosingBehavior GetActualClosingBehavior(DockLayoutManager container, BaseLayoutItem item)
+        {
+            ClosingBehavior closingBehavior = GetClosingBehavior(item);
+            closingBehavior ??= new HierarchyPropertyValue<ClosingBehavior>(BaseLayoutItem.ClosingBehaviorProperty, ClosingBehavior.Default).Get(item, item.ClosingBehavior);
+            return (((closingBehavior != ClosingBehavior.Default) || (container == null)) ? closingBehavior : container.ClosingBehavior);
+        }
+
+        internal static BaseLayoutItem GetActualSelectedItem(BaseLayoutItem item)
+        {
+            LayoutGroup group = item as LayoutGroup;
+            if (group != null)
+            {
+                Func<BaseLayoutItem, bool> predicate = <>c.<>9__38_0;
+                if (<>c.<>9__38_0 == null)
+                {
+                    Func<BaseLayoutItem, bool> local1 = <>c.<>9__38_0;
+                    predicate = <>c.<>9__38_0 = x => x.IsActive;
+                }
+                BaseLayoutItem item2 = group.GetNestedItems().FirstOrDefault<BaseLayoutItem>(predicate);
+                if (item2 != null)
+                {
+                    item = item2;
+                }
+            }
+            return item;
+        }
+
+        public static IEnumerable<BaseLayoutItem> GetAffectedItems(BaseLayoutItem item)
+        {
+            List<BaseLayoutItem> panels = new List<BaseLayoutItem>();
+            item.Accept(delegate (BaseLayoutItem x) {
+                if (x is LayoutPanel)
+                {
+                    panels.Add(x);
+                }
+            });
+            return panels;
+        }
+
+        public static ClosingBehavior GetClosingBehavior(DependencyObject obj) => 
+            (ClosingBehavior) obj.GetValue(ClosingBehaviorProperty);
+
+        private static IDockController GetDockController(DockLayoutManager container) => 
+            container?.DockController;
+
+        public static DockType GetDockTypeInContainer(DockLayoutManager container, BaseLayoutItem item)
+        {
+            LayoutGroup root = item.GetRoot();
+            AutoHideGroup group2 = root as AutoHideGroup;
+            if (group2 != null)
+            {
+                return group2.DockType.ToDockType();
+            }
+            FloatGroup group3 = root as FloatGroup;
+            return ((group3 == null) ? DockType.Fill : DropTypeHelper.CalcCenterDropInfo(CoordinateHelper.GetContainerRect(container), CoordinateHelper.GetCenter(new Rect(group3.FloatLocation, group3.FloatSize))).DockType);
+        }
+
+        internal static bool GetForceSizeUpdate(DependencyObject obj) => 
+            (bool) obj.GetValue(ForceSizeUpdateProperty);
+
+        public static DocumentGroup GetNextNotEmptyDocumentGroup(BaseLayoutItem item)
+        {
+            if ((item != null) && (item.Parent != null))
+            {
+                LayoutGroup parent = item.Parent;
+                for (int i = parent.Items.IndexOf(item) + 1; i < parent.Items.Count; i++)
+                {
+                    DocumentGroup group2 = parent.Items[i] as DocumentGroup;
+                    if ((group2 != null) && (group2.Items.Count > 0))
+                    {
+                        return group2;
+                    }
+                }
+            }
+            return null;
+        }
+
+        public static DocumentGroup GetPreviousNotEmptyDocumentGroup(BaseLayoutItem item)
+        {
+            if ((item != null) && (item.Parent != null))
+            {
+                LayoutGroup parent = item.Parent;
+                for (int i = parent.Items.IndexOf(item) - 1; i >= 0; i--)
+                {
+                    DocumentGroup group2 = parent.Items[i] as DocumentGroup;
+                    if ((group2 != null) && (group2.Items.Count > 0))
+                    {
+                        return group2;
+                    }
+                }
+            }
+            return null;
+        }
+
+        internal static bool InsertItemInGroup(LayoutGroup group, BaseLayoutItem item, int index, bool forceSizeUpdate = false)
+        {
+            bool flag = (item.Parent == null) || item.Parent.Remove(item);
+            if (flag)
+            {
+                bool flag2 = !group.IgnoreOrientation && (group.Orientation == Orientation.Horizontal);
+                GridLength length = new GridLength(DockPreviewCalculator.GetStarDockSize(group), GridUnitType.Star);
+                DockSituation lastDockSituation = item.GetLastDockSituation();
+                if (lastDockSituation != null)
+                {
+                    if (lastDockSituation.Width.IsAbsolute)
+                    {
+                        item.ItemWidth = lastDockSituation.Width;
+                    }
+                    if (lastDockSituation.Height.IsAbsolute)
+                    {
+                        item.ItemHeight = lastDockSituation.Height;
+                    }
+                    if (ReferenceEquals(lastDockSituation.DockTarget, group) && lastDockSituation.TheSameLengths(group))
+                    {
+                        length = flag2 ? lastDockSituation.Width : lastDockSituation.Height;
+                        forceSizeUpdate = true;
+                    }
+                }
+                GridLength length2 = flag2 ? item.ItemWidth : item.ItemHeight;
+                if (!length2.IsAuto)
+                {
+                    if (!length2.IsAbsolute)
+                    {
+                        if (forceSizeUpdate || GetForceSizeUpdate(item))
+                        {
+                            item.SetValue(flag2 ? BaseLayoutItem.ItemWidthProperty : BaseLayoutItem.ItemHeightProperty, length);
+                        }
+                    }
+                    else
+                    {
+                        GridLength length4 = flag2 ? group.ItemWidth : group.ItemHeight;
+                        if (length4.IsAbsolute && (length4.Value < (length2.Value * 1.5)))
+                        {
+                            length4 = new GridLength(length4.Value + length2.Value, GridUnitType.Pixel);
+                            group.SetValue(flag2 ? BaseLayoutItem.ItemWidthProperty : BaseLayoutItem.ItemHeightProperty, length4);
+                        }
+                    }
+                }
+                group.Items.Insert(Math.Min(index, group.Items.Count), item);
+            }
+            return flag;
+        }
+
+        public static void SetClosingBehavior(DependencyObject obj, ClosingBehavior value)
+        {
+            obj.SetValue(ClosingBehaviorProperty, value);
+        }
+
+        internal static void SetForceSizeUpdate(DependencyObject obj, bool value)
+        {
+            obj.SetValue(ForceSizeUpdateProperty, value);
+        }
+
+        public static LayoutGroup Unbox(DockLayoutManager container, LayoutGroup group) => 
+            Unbox(container, group, null, null);
+
+        internal static LayoutGroup Unbox(DockLayoutManager container, LayoutGroup group, Action<LayoutGroup> beforeUnboxing, Action<LayoutGroup> afterUnboxing)
+        {
+            LayoutGroup parent = group.Parent;
+            if (parent == null)
+            {
+                return UnboxAsRootGroup(group, beforeUnboxing);
+            }
+            BaseLayoutItem[] items = group.GetItems();
+            bool flag2 = parent.IsControlItemsHost == group.IsControlItemsHost;
+            if (((parent.IgnoreOrientation || (parent.Orientation == group.Orientation)) || (items.Length == 1)) & flag2)
+            {
+                if (beforeUnboxing != null)
+                {
+                    beforeUnboxing(group);
+                }
+                UnboxCore(group, parent, items);
+                if (afterUnboxing != null)
+                {
+                    afterUnboxing(group);
+                }
+                CheckUpdateView(container, parent);
+            }
+            return parent;
+        }
+
+        private static LayoutGroup UnboxAsRootGroup(LayoutGroup group, Action<LayoutGroup> beforeUnboxing)
+        {
+            if ((group.Items.Count == 1) && !group.IsLayoutRoot)
+            {
+                LayoutGroup nestedGroup = group[0] as LayoutGroup;
+                if (CanUnbox(group, nestedGroup))
+                {
+                    if (beforeUnboxing != null)
+                    {
+                        beforeUnboxing(group);
+                    }
+                    if (group.Orientation != nestedGroup.Orientation)
+                    {
+                        group.Orientation = nestedGroup.Orientation;
+                    }
+                    UnboxCore(nestedGroup, group, nestedGroup.GetItems());
+                }
+            }
+            return group;
+        }
+
+        private static void UnboxCore(LayoutGroup group, LayoutGroup behindGroup, BaseLayoutItem[] nestedItems)
+        {
+            using (behindGroup.LockVisualTree())
+            {
+                int index = behindGroup.Items.IndexOf(group);
+                int num2 = 0;
+                while (true)
+                {
+                    if (num2 >= nestedItems.Length)
+                    {
+                        int num3 = 0;
+                        while (true)
+                        {
+                            if (num3 >= nestedItems.Length)
+                            {
+                                behindGroup.Items.Remove(group);
+                                group.IsUngroupped = true;
+                                if ((behindGroup is FloatGroup) && behindGroup.HasSingleItem)
+                                {
+                                    UpdateFloatGroup(behindGroup[0], (FloatGroup) behindGroup);
+                                }
+                                break;
+                            }
+                            behindGroup.Insert(num3 + index, nestedItems[num3]);
+                            num3++;
+                        }
+                        break;
+                    }
+                    group.Remove(nestedItems[num2]);
+                    num2++;
+                }
+            }
+        }
+
+        private static void UpdateFloatGroup(BaseLayoutItem item, FloatGroup floatGroup)
+        {
+            ClearSize(item, false);
+        }
+
+        [Serializable, CompilerGenerated]
+        private sealed class <>c
+        {
+            public static readonly DockControllerHelper.<>c <>9 = new DockControllerHelper.<>c();
+            public static Func<BaseLayoutItem, bool> <>9__38_0;
+
+            internal bool <GetActualSelectedItem>b__38_0(BaseLayoutItem x) => 
+                x.IsActive;
+        }
+    }
+}
+

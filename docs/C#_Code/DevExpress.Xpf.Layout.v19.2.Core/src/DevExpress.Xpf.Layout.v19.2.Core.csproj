@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>c68a4154-7c09-4837-a4ff-d68179ad4597</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>DevExpress.Xpf.Layout.v19.2.Core</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v19.2" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="System" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System.Core" />
+    <Compile Include="Global.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\TabHeaderHelper.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\ITabHeaderInfo.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\ITabHeaderLayoutOptions.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\ITabHeaderLayoutResult.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\IScrollResult.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\IMultiLineLayoutResult.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\ITabHeaderLayoutCalculator.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\TabHeaderLayoutType.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\TabHeaderPinLocation.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\ITabHeaderInfoExtensions.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\BaseLayoutCalculator.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\MultiLineLayoutResult.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\TrimLayoutCalculator.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\ScrollLayoutCalculator.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\MultiLineLayoutCalculator.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\HeaderLayoutCalculatorFactory.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\RangeEx.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Notification.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\NotificationEventArgs.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\NotificationBatch.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\NotificationHelper.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Tracker!1.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Ref.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\CollectionHelper.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\ServiceLocator!1.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\IViewAdapterExtensions.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\ContextAction.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\SizingAction.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\DropType.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\ResizeType.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Alignment.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\DockType.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\MoveType.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\InsertType.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\OperationType.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\ViewAction.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\State.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\SelectionMode.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\LayoutItemType.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\IBaseObject.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\ISupportHierarchy!1.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\IReadOnlyCollection!1.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\IChangeableCollection!1.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\CollectionChangedType.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\ISupportNotification!1.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\ISupportVisitor!1.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\IVisitor!1.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\IUIElement.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\EmptyUIChildrenCollection.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\UIChildren.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\CollectionChangedEventArgs!1.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\VisitDelegate!1.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\CollectionChangedHandler!1.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\ISelectionKey.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\ILayoutElement.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\ILayoutContainer.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\ILayoutElementFactory.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\HostType.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\ILayoutElementHost.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\ILayoutElementHostAdapter.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\IViewAdapter.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\ILayoutElementBehavior.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\IView.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\BaseResizeInfo.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\ResizeHelper.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\BaseDropInfo.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\DockHelper.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\DockTypeExtension.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\DockExtensions.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\MoveTypeExtension.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\DropTypeExtension.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\DropTypeHelper.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\PlacementHelper.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\MathHelper.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\GeometryHelper.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\SizingActionExtension.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\IFloatingHelper.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\SupportFloatingListener.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\LayoutElementCollection.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\BaseLayoutElement.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\BaseLayoutContainer.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\LayoutElementEnumerator.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\IUIElementEnumerator.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\ElementHelper.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\HitInfo!1.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\LayoutElementHitTest.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\LayoutElementHitInfo.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\BaseLayoutElementHost.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\UILayoutElementFactory.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\IUIService.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\IUIServiceListener.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\IUIServiceProvider.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\IDragService.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\IDragServiceListener.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\IDragServiceStateFactory.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\IDragServiceState.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\ISelectionService.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\ISelectionServiceListener.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\IUIInteractionService.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\IUIInteractionServiceListener.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\IActionService.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\IActionServiceListener.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\IContextActionService.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\IContextActionServiceListener.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\UIService.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Selection\SelectionListener.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Selection\SelectionChangingHandler!1.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Selection\SelectionChangedHandler!1.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Selection\RequestSelectionRangeHandler!1.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Selection\SelectionInfo!1.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Selection\SelectionHelper.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Selection\SelectionService.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\UIInteraction\UIInteractionService.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\UIInteraction\UIInteractionServiceListener.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Dragging\DragServiceState.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Dragging\DragServiceStateFactory.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Dragging\DragServiceHelper.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Dragging\RegularDragServiceState.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Dragging\FloatingDragServiceState.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Dragging\ClientDragServiceStateBase.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Dragging\ClientDragServiceState.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Dragging\ResizingDragServiceState.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Dragging\ReorderingDragServiceState.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Dragging\FloatingMovingDragServiceState.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Dragging\FloatingResizingDragServiceState.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Dragging\NonClientDragServiceState.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Dragging\DragService.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Dragging\BaseDragListener.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Dragging\RegularListener.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Dragging\FloatingListener.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Dragging\ResizingListener.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Dragging\NonClientDraggingListener.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Dragging\ClientDraggingListener.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Dragging\ReorderingListener.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Dragging\FloatingMovingListener.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Dragging\FloatingResizingListener.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Base\BaseObject.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Base\BaseReadOnlyList!1.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Base\BaseChangeableList!1.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Base\BaseException.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Base\AffinityHelperException.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Base\AssertionException.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Actions\ActionService.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Actions\ContextActionService.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Actions\ActionServiceListener.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Platform\SystemInformation.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Platform\WinAPI.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Platform\LayoutElementHostAdapter.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Platform\ViewAdapter.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Platform\MouseButtons.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Platform\KeyEventType.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Platform\MouseEventType.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Platform\MouseEventArgs.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Platform\BaseView.cs" />
+    <Compile Include="DevExpress\Xpf\Layout\Core\Platform\ViewCollection.cs" />
+  </ItemGroup>
+</Project>

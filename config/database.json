@@ -1,0 +1,15 @@
+{
+    "mysql": {
+        "host": "localhost",
+        "user": "root",
+        "password": "dmeworks",
+        "database": "c01"
+    },
+    "postgresql": {
+        "host": "ep-frosty-math-a82fyke1.eastus2.azure.neon.tech",
+        "user": "neondb_owner",
+        "password": "hD1GCdJxU2Io",
+        "dbname": "Aries-Saas",
+        "sslmode": "require"
+    }
+}

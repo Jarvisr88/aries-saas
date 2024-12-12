@@ -1,0 +1,34 @@
+﻿namespace DevExpress.DirectX.Common.DirectWrite
+{
+    using System;
+
+    public enum DWRITE_INFORMATIONAL_STRING_ID
+    {
+        NONE = 0,
+        COPYRIGHT_NOTICE = 1,
+        VERSION_STRINGS = 2,
+        TRADEMARK = 3,
+        MANUFACTURER = 4,
+        DESIGNER = 5,
+        DESIGNER_URL = 6,
+        DESCRIPTION = 7,
+        FONT_VENDOR_URL = 8,
+        LICENSE_DESCRIPTION = 9,
+        LICENSE_INFO_URL = 10,
+        WIN32_FAMILY_NAMES = 11,
+        WIN32_SUBFAMILY_NAMES = 12,
+        TYPOGRAPHIC_FAMILY_NAMES = 13,
+        TYPOGRAPHIC_SUBFAMILY_NAMES = 14,
+        SAMPLE_TEXT = 15,
+        FULL_NAME = 0x10,
+        POSTSCRIPT_NAME = 0x11,
+        POSTSCRIPT_CID_NAME = 0x12,
+        WEIGHT_STRETCH_STYLE_FAMILY_NAME = 0x13,
+        DESIGN_SCRIPT_LANGUAGE_TAG = 20,
+        SUPPORTED_SCRIPT_LANGUAGE_TAG = 0x15,
+        PREFERRED_FAMILY_NAMES = 13,
+        PREFERRED_SUBFAMILY_NAMES = 14,
+        WWS_FAMILY_NAME = 0x13
+    }
+}
+

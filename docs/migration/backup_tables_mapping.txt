@@ -1,0 +1,6 @@
+bak_tbl_Del_949 -> tbl_compliance.DeliveryDate
+bak_tbl_Dat_244 -> tbl_compliance_notes.Date
+bak_tbl_Set_665 -> tbl_customer.SetupDate
+bak_tbl_Dat_594 -> tbl_inventory_transaction.Date
+bak_tbl_DOS_663 -> tbl_invoicedetails.DOSFrom
+bak_tbl_DOS_292 -> tbl_orderdetails.DOSFrom

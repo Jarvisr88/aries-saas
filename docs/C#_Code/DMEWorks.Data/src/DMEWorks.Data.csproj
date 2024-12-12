@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>2876c122-af72-430f-96b8-b67e360562db</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>DMEWorks.Data</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Dapper" />
+    <Reference Include="System.Data" />
+    <Reference Include="Devart.Data.MySql" />
+    <Reference Include="System.Core" />
+    <Compile Include="Global.cs" />
+    <Compile Include="DMEWorks\Data\ValidationException.cs" />
+    <Compile Include="DMEWorks\Data\DeadlockException.cs" />
+    <Compile Include="DMEWorks\Data\DuplicateKeyException.cs" />
+    <Compile Include="DMEWorks\Data\ObjectIsModifiedException.cs" />
+    <Compile Include="DMEWorks\Data\ObjectIsNotFoundException.cs" />
+    <Compile Include="DMEWorks\Data\Queries.cs" />
+    <Compile Include="DMEWorks\Data\TypeHandlers\SetTypeHandler!1.cs" />
+    <Compile Include="DMEWorks\Data\TypeHandlers\EnumTypeHandler!1.cs" />
+    <Compile Include="DMEWorks\Data\Entities\Address.cs" />
+    <Compile Include="DMEWorks\Data\Common\AdapterBase!4.cs" />
+    <Compile Include="DMEWorks\Data\Common\IAdapter.cs" />
+    <Compile Include="DMEWorks\Data\Common\IError.cs" />
+    <Compile Include="DMEWorks\Data\Common\IKeyed!1.cs" />
+    <Compile Include="DMEWorks\Data\Common\IValidationResult.cs" />
+    <Compile Include="DMEWorks\Data\Adapters\InsuranceCompany\BasisTypeHandler.cs" />
+    <Compile Include="DMEWorks\Data\Adapters\InsuranceCompany\InsuranceCompanyAdapter.cs" />
+    <Compile Include="DMEWorks\Data\Adapters\InsuranceCompany\InsuranceCompanyMirTypeHandler.cs" />
+    <Compile Include="DMEWorks\Data\Adapters\InsuranceCompany\RegionTypeHandler.cs" />
+    <Compile Include="DMEWorks\Data\Adapters\InsuranceCompany\InsuranceCompanyMir.cs" />
+    <Compile Include="DMEWorks\Data\Adapters\InsuranceCompany\Basis.cs" />
+    <Compile Include="DMEWorks\Data\Adapters\InsuranceCompany\Region.cs" />
+    <Compile Include="DMEWorks\Data\Adapters\InsuranceCompany\InsuranceCompany.cs" />
+    <EmbeddedResource Include="DMEWorks.Data.Queries.resources" />
+  </ItemGroup>
+</Project>

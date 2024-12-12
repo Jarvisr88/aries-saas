@@ -1,0 +1,370 @@
+﻿namespace DevExpress.Pdf.Native
+{
+    using System;
+    using System.Collections.Generic;
+
+    public class PdfType1FontPredefinedEncoding : PdfType1FontEncoding
+    {
+        private static readonly SortedList<byte, string> standardEncoding;
+        private static readonly SortedList<byte, string> expertEncoding;
+        private readonly PdfType1FontPredefinedEncodingID id;
+
+        static PdfType1FontPredefinedEncoding()
+        {
+            SortedList<byte, string> list1 = new SortedList<byte, string>();
+            list1.Add(0x20, "space");
+            list1.Add(0x21, "exclam");
+            list1.Add(0x22, "quotedbl");
+            list1.Add(0x23, "numbersign");
+            list1.Add(0x24, "dollar");
+            list1.Add(0x25, "percent");
+            list1.Add(0x26, "ampersand");
+            list1.Add(0x27, "quoteright");
+            list1.Add(40, "parenleft");
+            list1.Add(0x29, "parenright");
+            list1.Add(0x2a, "asterisk");
+            list1.Add(0x2b, "plus");
+            list1.Add(0x2c, "comma");
+            list1.Add(0x2d, "hyphen");
+            list1.Add(0x2e, "period");
+            list1.Add(0x2f, "slash");
+            list1.Add(0x30, "zero");
+            list1.Add(0x31, "one");
+            list1.Add(50, "two");
+            list1.Add(0x33, "three");
+            list1.Add(0x34, "four");
+            list1.Add(0x35, "five");
+            list1.Add(0x36, "six");
+            list1.Add(0x37, "seven");
+            list1.Add(0x38, "eight");
+            list1.Add(0x39, "nine");
+            list1.Add(0x3a, "colon");
+            list1.Add(0x3b, "semicolon");
+            list1.Add(60, "less");
+            list1.Add(0x3d, "equal");
+            list1.Add(0x3e, "greater");
+            list1.Add(0x3f, "question");
+            list1.Add(0x40, "at");
+            list1.Add(0x41, "A");
+            list1.Add(0x42, "B");
+            list1.Add(0x43, "C");
+            list1.Add(0x44, "D");
+            list1.Add(0x45, "E");
+            list1.Add(70, "F");
+            list1.Add(0x47, "G");
+            list1.Add(0x48, "H");
+            list1.Add(0x49, "I");
+            list1.Add(0x4a, "J");
+            list1.Add(0x4b, "K");
+            list1.Add(0x4c, "L");
+            list1.Add(0x4d, "M");
+            list1.Add(0x4e, "N");
+            list1.Add(0x4f, "O");
+            list1.Add(80, "P");
+            list1.Add(0x51, "Q");
+            list1.Add(0x52, "R");
+            list1.Add(0x53, "S");
+            list1.Add(0x54, "T");
+            list1.Add(0x55, "U");
+            list1.Add(0x56, "V");
+            list1.Add(0x57, "W");
+            list1.Add(0x58, "X");
+            list1.Add(0x59, "Y");
+            list1.Add(90, "Z");
+            list1.Add(0x5b, "bracketleft");
+            list1.Add(0x5c, "backslash");
+            list1.Add(0x5d, "bracketright");
+            list1.Add(0x5e, "asciicircum");
+            list1.Add(0x5f, "underscore");
+            list1.Add(0x60, "quoteleft");
+            list1.Add(0x61, "a");
+            list1.Add(0x62, "b");
+            list1.Add(0x63, "c");
+            list1.Add(100, "d");
+            list1.Add(0x65, "e");
+            list1.Add(0x66, "f");
+            list1.Add(0x67, "g");
+            list1.Add(0x68, "h");
+            list1.Add(0x69, "i");
+            list1.Add(0x6a, "j");
+            list1.Add(0x6b, "k");
+            list1.Add(0x6c, "l");
+            list1.Add(0x6d, "m");
+            list1.Add(110, "n");
+            list1.Add(0x6f, "o");
+            list1.Add(0x70, "p");
+            list1.Add(0x71, "q");
+            list1.Add(0x72, "r");
+            list1.Add(0x73, "s");
+            list1.Add(0x74, "t");
+            list1.Add(0x75, "u");
+            list1.Add(0x76, "v");
+            list1.Add(0x77, "w");
+            list1.Add(120, "x");
+            list1.Add(0x79, "y");
+            list1.Add(0x7a, "z");
+            list1.Add(0x7b, "braceleft");
+            list1.Add(0x7c, "bar");
+            list1.Add(0x7d, "braceright");
+            list1.Add(0x7e, "asciitilde");
+            list1.Add(0xa1, "exclamdown");
+            list1.Add(0xa2, "cent");
+            list1.Add(0xa3, "sterling");
+            list1.Add(0xa4, "fraction");
+            list1.Add(0xa5, "yen");
+            list1.Add(0xa6, "florin");
+            list1.Add(0xa7, "section");
+            list1.Add(0xa8, "currency");
+            list1.Add(0xa9, "quotesingle");
+            list1.Add(170, "quotedblleft");
+            list1.Add(0xab, "guillemotleft");
+            list1.Add(0xac, "guilsinglleft");
+            list1.Add(0xad, "guilsinglright");
+            list1.Add(0xae, "fi");
+            list1.Add(0xaf, "fl");
+            list1.Add(0xb1, "endash");
+            list1.Add(0xb2, "dagger");
+            list1.Add(0xb3, "daggerdbl");
+            list1.Add(180, "periodcentered");
+            list1.Add(0xb6, "paragraph");
+            list1.Add(0xb7, "bullet");
+            list1.Add(0xb8, "quotesinglbase");
+            list1.Add(0xb9, "quotedblbase");
+            list1.Add(0xba, "quotedblright");
+            list1.Add(0xbb, "guillemotright");
+            list1.Add(0xbc, "ellipsis");
+            list1.Add(0xbd, "perthousand");
+            list1.Add(0xbf, "questiondown");
+            list1.Add(0xc1, "grave");
+            list1.Add(0xc2, "acute");
+            list1.Add(0xc3, "circumflex");
+            list1.Add(0xc4, "tilde");
+            list1.Add(0xc5, "macron");
+            list1.Add(0xc6, "breve");
+            list1.Add(0xc7, "dotaccent");
+            list1.Add(200, "dieresis");
+            list1.Add(0xca, "ring");
+            list1.Add(0xcb, "cedilla");
+            list1.Add(0xcd, "hungarumlaut");
+            list1.Add(0xce, "ogonek");
+            list1.Add(0xcf, "caron");
+            list1.Add(0xd0, "emdash");
+            list1.Add(0xe1, "AE");
+            list1.Add(0xe3, "ordfeminine");
+            list1.Add(0xe8, "Lslash");
+            list1.Add(0xe9, "Oslash");
+            list1.Add(0xea, "OE");
+            list1.Add(0xeb, "ordmasculine");
+            list1.Add(0xf1, "ae");
+            list1.Add(0xf5, "dotlessi");
+            list1.Add(0xf8, "lslash");
+            list1.Add(0xf9, "oslash");
+            list1.Add(250, "oe");
+            list1.Add(0xfb, "germandbls");
+            standardEncoding = list1;
+            SortedList<byte, string> list2 = new SortedList<byte, string>();
+            list2.Add(0x20, "space");
+            list2.Add(0x21, "exclamsmall");
+            list2.Add(0x22, "Hungarumlautsmall");
+            list2.Add(0x24, "dollaroldstyle");
+            list2.Add(0x25, "dollarsuperior");
+            list2.Add(0x26, "ampersandsmall");
+            list2.Add(0x27, "Acutesmall");
+            list2.Add(40, "parenleftsuperior");
+            list2.Add(0x29, "parenrightsuperior");
+            list2.Add(0x2a, "twodotenleader");
+            list2.Add(0x2b, "onedotenleader");
+            list2.Add(0x2c, "comma");
+            list2.Add(0x2d, "hyphen");
+            list2.Add(0x2e, "period");
+            list2.Add(0x2f, "fraction");
+            list2.Add(0x30, "zerooldstyle");
+            list2.Add(0x31, "oneoldstyle");
+            list2.Add(50, "twooldstyle");
+            list2.Add(0x33, "threeoldstyle");
+            list2.Add(0x34, "fouroldstyle");
+            list2.Add(0x35, "fiveoldstyle");
+            list2.Add(0x36, "sixoldstyle");
+            list2.Add(0x37, "sevenoldstyle");
+            list2.Add(0x38, "eightoldstyle");
+            list2.Add(0x39, "nineoldstyle");
+            list2.Add(0x3a, "colon");
+            list2.Add(0x3b, "semicolon");
+            list2.Add(60, "commasuperior");
+            list2.Add(0x3d, "threequartersemdash");
+            list2.Add(0x3e, "periodsuperior");
+            list2.Add(0x3f, "questionsmall");
+            list2.Add(0x41, "asuperior");
+            list2.Add(0x42, "bsuperior");
+            list2.Add(0x43, "centsuperior");
+            list2.Add(0x44, "dsuperior");
+            list2.Add(0x45, "esuperior");
+            list2.Add(0x49, "isuperior");
+            list2.Add(0x4c, "lsuperior");
+            list2.Add(0x4d, "msuperior");
+            list2.Add(0x4e, "nsuperior");
+            list2.Add(0x4f, "osuperior");
+            list2.Add(0x52, "rsuperior");
+            list2.Add(0x53, "ssuperior");
+            list2.Add(0x54, "tsuperior");
+            list2.Add(0x56, "ff");
+            list2.Add(0x57, "fi");
+            list2.Add(0x58, "fl");
+            list2.Add(0x59, "ffi");
+            list2.Add(90, "ffl");
+            list2.Add(0x5b, "parenleftinferior");
+            list2.Add(0x5d, "parenrightinferior");
+            list2.Add(0x5e, "Circumflexsmall");
+            list2.Add(0x5f, "hyphensuperior");
+            list2.Add(0x60, "Gravesmall");
+            list2.Add(0x61, "Asmall");
+            list2.Add(0x62, "Bsmall");
+            list2.Add(0x63, "Csmall");
+            list2.Add(100, "Dsmall");
+            list2.Add(0x65, "Esmall");
+            list2.Add(0x66, "Fsmall");
+            list2.Add(0x67, "Gsmall");
+            list2.Add(0x68, "Hsmall");
+            list2.Add(0x69, "Ismall");
+            list2.Add(0x6a, "Jsmall");
+            list2.Add(0x6b, "Ksmall");
+            list2.Add(0x6c, "Lsmall");
+            list2.Add(0x6d, "Msmall");
+            list2.Add(110, "Nsmall");
+            list2.Add(0x6f, "Osmall");
+            list2.Add(0x70, "Psmall");
+            list2.Add(0x71, "Qsmall");
+            list2.Add(0x72, "Rsmall");
+            list2.Add(0x73, "Ssmall");
+            list2.Add(0x74, "Tsmall");
+            list2.Add(0x75, "Usmall");
+            list2.Add(0x76, "Vsmall");
+            list2.Add(0x77, "Wsmall");
+            list2.Add(120, "Xsmall");
+            list2.Add(0x79, "Ysmall");
+            list2.Add(0x7a, "Zsmall");
+            list2.Add(0x7b, "colonmonetary");
+            list2.Add(0x7c, "onefitted");
+            list2.Add(0x7d, "rupiah");
+            list2.Add(0x7e, "Tildesmall");
+            list2.Add(0xa1, "exclamdownsmall");
+            list2.Add(0xa2, "centoldstyle");
+            list2.Add(0xa3, "Lslashsmall");
+            list2.Add(0xa6, "Scaronsmall");
+            list2.Add(0xa7, "Zcaronsmall");
+            list2.Add(0xa8, "Dieresissmall");
+            list2.Add(0xa9, "Brevesmall");
+            list2.Add(170, "Caronsmall");
+            list2.Add(0xac, "Dotaccentsmall");
+            list2.Add(0xaf, "Macronsmall");
+            list2.Add(0xb2, "figuredash");
+            list2.Add(0xb3, "hypheninferior");
+            list2.Add(0xb6, "Ogoneksmall");
+            list2.Add(0xb7, "Ringsmall");
+            list2.Add(0xb8, "Cedillasmall");
+            list2.Add(0xbc, "onequarter");
+            list2.Add(0xbd, "onehalf");
+            list2.Add(190, "threequarters");
+            list2.Add(0xbf, "questiondownsmall");
+            list2.Add(0xc0, "oneeighth");
+            list2.Add(0xc1, "threeeighths");
+            list2.Add(0xc2, "fiveeighths");
+            list2.Add(0xc3, "seveneighths");
+            list2.Add(0xc4, "onethird");
+            list2.Add(0xc5, "twothirds");
+            list2.Add(200, "zerosuperior");
+            list2.Add(0xc9, "onesuperior");
+            list2.Add(0xca, "twosuperior");
+            list2.Add(0xcb, "threesuperior");
+            list2.Add(0xcc, "foursuperior");
+            list2.Add(0xcd, "fivesuperior");
+            list2.Add(0xce, "sixsuperior");
+            list2.Add(0xcf, "sevensuperior");
+            list2.Add(0xd0, "eightsuperior");
+            list2.Add(0xd1, "ninesuperior");
+            list2.Add(210, "zeroinferior");
+            list2.Add(0xd3, "oneinferior");
+            list2.Add(0xd4, "twoinferior");
+            list2.Add(0xd5, "threeinferior");
+            list2.Add(0xd6, "fourinferior");
+            list2.Add(0xd7, "fiveinferior");
+            list2.Add(0xd8, "sixinferior");
+            list2.Add(0xd9, "seveninferior");
+            list2.Add(0xda, "eightinferior");
+            list2.Add(0xdb, "nineinferior");
+            list2.Add(220, "centinferior");
+            list2.Add(0xdd, "dollarinferior");
+            list2.Add(0xde, "periodinferior");
+            list2.Add(0xdf, "commainferior");
+            list2.Add(0xe0, "Agravesmall");
+            list2.Add(0xe1, "Aacutesmall");
+            list2.Add(0xe2, "Acircumflexsmall");
+            list2.Add(0xe3, "Atildesmall");
+            list2.Add(0xe4, "Adieresissmall");
+            list2.Add(0xe5, "Aringsmall");
+            list2.Add(230, "AEsmall");
+            list2.Add(0xe7, "Ccedillasmall");
+            list2.Add(0xe8, "Egravesmall");
+            list2.Add(0xe9, "Eacutesmall");
+            list2.Add(0xea, "Ecircumflexsmall");
+            list2.Add(0xeb, "Edieresissmall");
+            list2.Add(0xec, "Igravesmall");
+            list2.Add(0xed, "Iacutesmall");
+            list2.Add(0xee, "Icircumflexsmall");
+            list2.Add(0xef, "Idieresissmall");
+            list2.Add(240, "Ethsmall");
+            list2.Add(0xf1, "Ntildesmall");
+            list2.Add(0xf2, "Ogravesmall");
+            list2.Add(0xf3, "Oacutesmall");
+            list2.Add(0xf4, "Ocircumflexsmall");
+            list2.Add(0xf5, "Otildesmall");
+            list2.Add(0xf6, "Odieresissmall");
+            list2.Add(0xf7, "OEsmall");
+            list2.Add(0xf8, "Oslashsmall");
+            list2.Add(0xf9, "Ugravesmall");
+            list2.Add(250, "Uacutesmall");
+            list2.Add(0xfb, "Ucircumflexsmall");
+            list2.Add(0xfc, "Udieresissmall");
+            list2.Add(0xfd, "Yacutesmall");
+            list2.Add(0xfe, "Thornsmall");
+            list2.Add(0xff, "Ydieresissmall");
+            expertEncoding = list2;
+        }
+
+        public PdfType1FontPredefinedEncoding(PdfType1FontPredefinedEncodingID id)
+        {
+            this.id = id;
+        }
+
+        public override short[] GetCodeToGIDMapping(PdfType1FontCharset charset, PdfCompactFontFormatStringIndex stringIndex)
+        {
+            short[] numArray = new short[0x100];
+            IDictionary<short, short> sidToGidMapping = charset.SidToGidMapping;
+            foreach (KeyValuePair<byte, string> pair in (this.id == PdfType1FontPredefinedEncodingID.ExpertEncoding) ? expertEncoding : standardEncoding)
+            {
+                short num;
+                if (sidToGidMapping.TryGetValue(stringIndex.GetSID(pair.Value), out num))
+                {
+                    numArray[pair.Key] = num;
+                }
+            }
+            return numArray;
+        }
+
+        public static IDictionary<byte, string> StandardEncoding =>
+            standardEncoding;
+
+        public PdfType1FontPredefinedEncodingID ID =>
+            this.id;
+
+        public override bool IsDefault =>
+            this.id == PdfType1FontPredefinedEncodingID.StandardEncoding;
+
+        public override int Offset =>
+            (this.id == PdfType1FontPredefinedEncodingID.ExpertEncoding) ? 1 : 0;
+
+        public override int DataLength =>
+            0;
+    }
+}
+

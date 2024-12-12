@@ -1,0 +1,19 @@
+﻿namespace DevExpress.DirectX.StandardInterop.DirectWrite
+{
+    using DevExpress.DirectX.Common.DirectWrite;
+    using System;
+    using System.Runtime.InteropServices;
+
+    [ComImport, Guid("b7e6163e-7f46-43b4-84b3-e4e6249c365d"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+    public interface IDWriteTextAnalyzer
+    {
+        void AnalyzeScript([In] IDWriteTextAnalysisSource analysisSource, [In] int textPosition, [In] int textLength, [In] IDWriteTextAnalysisSink analysisSink);
+        void AnalyzeBidi([In] IDWriteTextAnalysisSource analysisSource, [In] int textPosition, [In] int textLength, [In] IDWriteTextAnalysisSink analysisSink);
+        void AnalyzeNumberSubstitution([In] IDWriteTextAnalysisSource analysisSource, [In] int textPosition, [In] int textLength, [In] IDWriteTextAnalysisSink analysisSink);
+        void AnalyzeLineBreakpoints([In] IDWriteTextAnalysisSource analysisSource, [In] int textPosition, [In] int textLength, [In] IDWriteTextAnalysisSink analysisSink);
+        void GetGlyphs([In, MarshalAs(UnmanagedType.LPWStr)] string textString, [In] int textLength, [In] IDWriteFontFace fontFace, [In, MarshalAs(UnmanagedType.Bool)] bool isSideways, [In, MarshalAs(UnmanagedType.Bool)] bool isRightToLeft, [In] ref DWRITE_SCRIPT_ANALYSIS scriptAnalysis, [In, MarshalAs(UnmanagedType.LPWStr)] string localeName, [In] IDWriteNumberSubstitution numberSubstitution, [In, MarshalAs(UnmanagedType.LPArray)] IntPtr[] features, [In, MarshalAs(UnmanagedType.LPArray)] int[] featureRangeLengths, [In] int featureRanges, [In] int maxGlyphCount, [Out, MarshalAs(UnmanagedType.LPArray)] short[] clusterMap, [Out, MarshalAs(UnmanagedType.LPArray)] DWRITE_SHAPING_TEXT_PROPERTIES[] textProps, [Out, MarshalAs(UnmanagedType.LPArray)] short[] glyphIndices, [Out, MarshalAs(UnmanagedType.LPArray)] DWRITE_SHAPING_GLYPH_PROPERTIES[] glyphProps, out int actualGlyphCount);
+        void GetGlyphPlacements([In, MarshalAs(UnmanagedType.LPWStr)] string textString, [In, MarshalAs(UnmanagedType.LPArray)] short[] clusterMap, [In, MarshalAs(UnmanagedType.LPArray)] DWRITE_SHAPING_TEXT_PROPERTIES[] textProps, [In] int textLength, [In, MarshalAs(UnmanagedType.LPArray)] short[] glyphIndices, [In, MarshalAs(UnmanagedType.LPArray)] DWRITE_SHAPING_GLYPH_PROPERTIES[] glyphProps, [In] int glyphCount, [In] IDWriteFontFace fontFace, [In] float fontEmSize, [In, MarshalAs(UnmanagedType.Bool)] bool isSideways, [In, MarshalAs(UnmanagedType.Bool)] bool isRightToLeft, [In] ref DWRITE_SCRIPT_ANALYSIS scriptAnalysis, [In, MarshalAs(UnmanagedType.LPWStr)] string localeName, [In, MarshalAs(UnmanagedType.LPArray)] IntPtr[] features, [In, MarshalAs(UnmanagedType.LPArray)] int[] featureRangeLengths, [In] int featureRanges, [Out, MarshalAs(UnmanagedType.LPArray)] float[] glyphAdvances, [Out, MarshalAs(UnmanagedType.LPArray)] DWRITE_GLYPH_OFFSET[] glyphOffsets);
+        void GetGdiCompatibleGlyphPlacements([In, MarshalAs(UnmanagedType.LPWStr)] string textString, [In, MarshalAs(UnmanagedType.LPArray)] short[] clusterMap, [In, MarshalAs(UnmanagedType.LPArray)] DWRITE_SHAPING_TEXT_PROPERTIES[] textProps, [In] int textLength, [In, MarshalAs(UnmanagedType.LPArray)] short[] glyphIndices, [In, MarshalAs(UnmanagedType.LPArray)] DWRITE_SHAPING_GLYPH_PROPERTIES[] glyphProps, [In] int glyphCount, [In] IDWriteFontFace fontFace, [In] float fontEmSize, [In] float pixelsPerDip, [In] IntPtr transform, [In, MarshalAs(UnmanagedType.Bool)] bool useGdiNatural, [In, MarshalAs(UnmanagedType.Bool)] bool isSideways, [In, MarshalAs(UnmanagedType.Bool)] bool isRightToLeft, [In] ref DWRITE_SCRIPT_ANALYSIS scriptAnalysis, [In, MarshalAs(UnmanagedType.LPWStr)] string localeName, [In] IntPtr features, [In, MarshalAs(UnmanagedType.LPArray)] int[] featureRangeLengths, [In] int featureRanges, [Out, MarshalAs(UnmanagedType.LPArray)] float[] glyphAdvances, [Out, MarshalAs(UnmanagedType.LPArray)] DWRITE_GLYPH_OFFSET[] glyphOffsets);
+    }
+}
+

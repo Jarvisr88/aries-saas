@@ -1,0 +1,56 @@
+﻿namespace DevExpress.Xpf.Bars.Themes
+{
+    using System;
+
+    public enum BarEditItemThemeKeys
+    {
+        public const BarEditItemThemeKeys Template = BarEditItemThemeKeys.Template;,
+        public const BarEditItemThemeKeys InMenuTemplate = BarEditItemThemeKeys.InMenuTemplate;,
+        public const BarEditItemThemeKeys LayoutPanelStyle = BarEditItemThemeKeys.LayoutPanelStyle;,
+        public const BarEditItemThemeKeys LayoutPanelStyleInMenu = BarEditItemThemeKeys.LayoutPanelStyleInMenu;,
+        public const BarEditItemThemeKeys LayoutPanelStyleInMainMenu = BarEditItemThemeKeys.LayoutPanelStyleInMainMenu;,
+        public const BarEditItemThemeKeys LayoutPanelStyleInStatusBar = BarEditItemThemeKeys.LayoutPanelStyleInStatusBar;,
+        public const BarEditItemThemeKeys LayoutPanelStyleInRibbonToolbar = BarEditItemThemeKeys.LayoutPanelStyleInRibbonToolbar;,
+        public const BarEditItemThemeKeys LayoutPanelStyleInRibbonPageHeader = BarEditItemThemeKeys.LayoutPanelStyleInRibbonPageHeader;,
+        public const BarEditItemThemeKeys LayoutPanelStyleInRibbonStatusBarLeft = BarEditItemThemeKeys.LayoutPanelStyleInRibbonStatusBarLeft;,
+        public const BarEditItemThemeKeys LayoutPanelStyleInRibbonStatusBarRight = BarEditItemThemeKeys.LayoutPanelStyleInRibbonStatusBarRight;,
+        public const BarEditItemThemeKeys LayoutPanelStyleInButtonGroup = BarEditItemThemeKeys.LayoutPanelStyleInButtonGroup;,
+        public const BarEditItemThemeKeys NormalContentStyleInButtonGroup = BarEditItemThemeKeys.NormalContentStyleInButtonGroup;,
+        public const BarEditItemThemeKeys HotContentStyleInButtonGroup = BarEditItemThemeKeys.HotContentStyleInButtonGroup;,
+        public const BarEditItemThemeKeys PressedContentStyleInButtonGroup = BarEditItemThemeKeys.PressedContentStyleInButtonGroup;,
+        public const BarEditItemThemeKeys DisabledContentStyleInButtonGroup = BarEditItemThemeKeys.DisabledContentStyleInButtonGroup;,
+        public const BarEditItemThemeKeys NormalContentStyleInMenu = BarEditItemThemeKeys.NormalContentStyleInMenu;,
+        public const BarEditItemThemeKeys HotContentStyleInMenu = BarEditItemThemeKeys.HotContentStyleInMenu;,
+        public const BarEditItemThemeKeys PressedContentStyleInMenu = BarEditItemThemeKeys.PressedContentStyleInMenu;,
+        public const BarEditItemThemeKeys DisabledContentStyleInMenu = BarEditItemThemeKeys.DisabledContentStyleInMenu;,
+        public const BarEditItemThemeKeys NormalEditStyle = BarEditItemThemeKeys.NormalEditStyle;,
+        public const BarEditItemThemeKeys HotEditStyle = BarEditItemThemeKeys.HotEditStyle;,
+        public const BarEditItemThemeKeys PressedEditStyle = BarEditItemThemeKeys.PressedEditStyle;,
+        public const BarEditItemThemeKeys DisabledEditStyle = BarEditItemThemeKeys.DisabledEditStyle;,
+        public const BarEditItemThemeKeys NormalEditStyleInMenu = BarEditItemThemeKeys.NormalEditStyleInMenu;,
+        public const BarEditItemThemeKeys HotEditStyleInMenu = BarEditItemThemeKeys.HotEditStyleInMenu;,
+        public const BarEditItemThemeKeys PressedEditStyleInMenu = BarEditItemThemeKeys.PressedEditStyleInMenu;,
+        public const BarEditItemThemeKeys DisabledEditStyleInMenu = BarEditItemThemeKeys.DisabledEditStyleInMenu;,
+        public const BarEditItemThemeKeys NormalEditStyleInMainMenu = BarEditItemThemeKeys.NormalEditStyleInMainMenu;,
+        public const BarEditItemThemeKeys HotEditStyleInMainMenu = BarEditItemThemeKeys.HotEditStyleInMainMenu;,
+        public const BarEditItemThemeKeys PressedEditStyleInMainMenu = BarEditItemThemeKeys.PressedEditStyleInMainMenu;,
+        public const BarEditItemThemeKeys DisabledEditStyleInMainMenu = BarEditItemThemeKeys.DisabledEditStyleInMainMenu;,
+        public const BarEditItemThemeKeys NormalEditStyleInStatusBar = BarEditItemThemeKeys.NormalEditStyleInStatusBar;,
+        public const BarEditItemThemeKeys HotEditStyleInStatusBar = BarEditItemThemeKeys.HotEditStyleInStatusBar;,
+        public const BarEditItemThemeKeys PressedEditStyleInStatusBar = BarEditItemThemeKeys.PressedEditStyleInStatusBar;,
+        public const BarEditItemThemeKeys DisabledEditStyleInStatusBar = BarEditItemThemeKeys.DisabledEditStyleInStatusBar;,
+        public const BarEditItemThemeKeys NormalEditStyleInButtonGroup = BarEditItemThemeKeys.NormalEditStyleInButtonGroup;,
+        public const BarEditItemThemeKeys HotEditStyleInButtonGroup = BarEditItemThemeKeys.HotEditStyleInButtonGroup;,
+        public const BarEditItemThemeKeys PressedEditStyleInButtonGroup = BarEditItemThemeKeys.PressedEditStyleInButtonGroup;,
+        public const BarEditItemThemeKeys DisabledEditStyleInButtonGroup = BarEditItemThemeKeys.DisabledEditStyleInButtonGroup;,
+        public const BarEditItemThemeKeys NormalEditStyleInRibbonPageGroup = BarEditItemThemeKeys.NormalEditStyleInRibbonPageGroup;,
+        public const BarEditItemThemeKeys HotEditStyleInRibbonPageGroup = BarEditItemThemeKeys.HotEditStyleInRibbonPageGroup;,
+        public const BarEditItemThemeKeys PressedEditStyleInRibbonPageGroup = BarEditItemThemeKeys.PressedEditStyleInRibbonPageGroup;,
+        public const BarEditItemThemeKeys DisabledEditStyleInRibbonPageGroup = BarEditItemThemeKeys.DisabledEditStyleInRibbonPageGroup;,
+        public const BarEditItemThemeKeys InMenuClientPadding = BarEditItemThemeKeys.InMenuClientPadding;,
+        public const BarEditItemThemeKeys EditContentMargin = BarEditItemThemeKeys.EditContentMargin;,
+        public const BarEditItemThemeKeys InRibbonEditContentMargin = BarEditItemThemeKeys.InRibbonEditContentMargin;,
+        public const BarEditItemThemeKeys ControlTemplateInRadialMenu = BarEditItemThemeKeys.ControlTemplateInRadialMenu;
+    }
+}
+

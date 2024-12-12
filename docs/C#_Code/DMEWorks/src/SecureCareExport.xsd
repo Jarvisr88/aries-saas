@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CMNs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="CMN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Section_B">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Length_of_Need" type="xs:unsignedByte" />
+                    <xs:element name="Diagnoses">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Diagnosis">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ICD-Code" type="xs:unsignedByte" />
+                                <xs:element name="Description" type="xs:string" />
+                                <xs:element name="Date" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Answers">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="unbounded" name="Answer">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element maxOccurs="unbounded" name="SubAnswer">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute name="Id" type="xs:string" use="optional" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="Number" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Answerer">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Name" />
+                          <xs:element name="Title" />
+                          <xs:element name="Employer" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Date-Signed" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="Status" type="xs:string" use="required" />
+            <xs:attribute name="Form" type="xs:string" use="required" />
+            <xs:attribute name="DocumentKey" type="xs:unsignedInt" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

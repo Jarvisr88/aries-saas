@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>56110bfd-c3c8-4b68-b191-44ca12f9b8a5</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>DevExpress.Xpf.PdfViewer.v19.2</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Xaml" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="DevExpress.Data.v19.2" />
+    <Reference Include="System" />
+    <Reference Include="DevExpress.Xpf.Grid.v19.2" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="System.Core" />
+    <Reference Include="DevExpress.Pdf.v19.2.Core" />
+    <Reference Include="DevExpress.Xpf.Core.v19.2" />
+    <Reference Include="DevExpress.Xpf.DocumentViewer.v19.2.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="DevExpress.Pdf.v19.2.Drawing" />
+    <Reference Include="DevExpress.Mvvm.v19.2" />
+    <Reference Include="DevExpress.Xpf.Docking.v19.2" />
+    <Reference Include="System.Windows.Forms" />
+    <Compile Include="Global.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfAttachmentsViewerCommands.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfAttachmentsViewerState.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfAttachmentsViewerPanelStyle.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfAttachmentsViewerSettings.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfAttachmentsViewerControl.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfMRUSplitItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfBarSplitItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfBarCheckItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfBarCommentItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfBarContainerControl.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfBarControl.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\DefaultPdfBarManagerItemNames.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\AnnotationPropertiesBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\DeleteAnnotationBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\HandToolBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\SelectToolBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\MarqueeZoomBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\FindTextBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\OpenDocumentSplitBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\OpenDocumentFromWebBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PrintDocumentBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PropertiesBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\SelectAllBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\SaveAsBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\CopyBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\ImportBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\ExportBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PageLayoutBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\HighlightSelectedTextBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\StrikethroughSelectedTextBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\UnderlineSelectedTextButtonBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\HighlightTextBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\StrikethroughTextBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\UnderlineTextBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfCheckBarItemTemplateSelector.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfCommandProvider.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfControllerBehavior.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfNavigationStrategy.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\CursorModeType.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\NavigationPanelsLayout.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfContinueSearchFrom.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfPrintPageEventArgs.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfPrintPageEventHandler.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfQueryPageSettingsEventArgs.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfQueryPageSettingsEventHandler.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\GetDocumentPasswordEventArgs.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\GetDocumentPasswordEventHandler.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\UriOpeningEventArgs.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\AttachmentOpeningEventArgs.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\AttachmentOpeningEventHandler.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\ReferencedDocumentOpeningEventHandler.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\ReferencedDocumentOpeningEventArgs.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\UriOpeningEventHandler.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\SelectionEventArgs.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\FormFieldValueChangingEventHandler.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\FormFieldValueChangingEventArgs.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\FormFieldValueChangedEventHandler.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\FormFieldValueChangedEventArgs.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PageSetupDialogShowingEventHandler.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PageSetupDialogShowingEventArgs.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\DocumentClosingEventHandler.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\DocumentClosingEventArgs.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\SelectionEventHandler.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfTextMarkupAnnotationCreatingEventHandler.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfTextMarkupAnnotationCreatingEventArgs.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfTextMarkupAnnotationCreatedEventHandler.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfTextMarkupAnnotationCreatedEventArgs.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\ShownEditorEventHandler.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\ShowingEditorEventHandler.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\HiddenEditorEventHandler.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfEditorEventArgsBase.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfShowingEditorEventArgs.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfEditorEventArgs.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\AnnotationDeletingEventHandler.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\AnnotationDeletingEventArgs.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PopupMenuShowingEventHandler.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PopupMenuShowingEventArgs.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfTextMarkupAnnotationChangedEventHandler.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfTextMarkupAnnotationChangedEventArgs.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\MarkupAnnotationGotFocusEventHandler.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\MarkupAnnotationGotFocusEventArgs.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\MarkupAnnotationLostFocusEventHandler.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\MarkupAnnotationLostFocusEventArgs.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\ExceptionMessageOrigin.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\ExceptionMessageAction.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\ExceptionMessageEventHandler.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\ExceptionMessageEventArgs.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfViewerControl.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PasswordViewModel.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\AddressViewModel.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\DocumentLoadingViewModel.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\SecureStringToStringConverter.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfDialogService.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfPropertyProvider.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfMarkupToolsSettings.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfSelectionContentType.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfSelectionContent.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfUriToBitmapImageConverterExtension.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfTextMarkupAnnotationTypeSource.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\DrawingColorToColorConverter.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\IPdfDocument.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\IPdfDocumentOutlinesViewerProperties.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\ISupportDefferedRendering.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\IPdfDocumentProperties.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\IPdfPage.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\IThumbnailsDocument.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\IThumbnailPage.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfSelectionCommand.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfBehaviorProvider.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\CellData.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\CellEditorColumn.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\CellEditorOwner.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\CellEditorEditingProvider.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\CellEditor.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\InplaceEditingStrategy.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\StickyNotesEdit.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\StickyNotesEditSettings.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\StickyNotesEditStrategy.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfViewerStringIdConverter.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfViewerStringId.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfViewerLocalizer.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfViewerControlResXLocalizer.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfViewerControlStringIdConverter.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfViewerControlLocalizedStringExtension.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfOutlinesViewerCommands.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfOutlinesViewerControl.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfOutlinesViewerItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfOutlinesViewerNodeSelector.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfColorToColorConverter.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfItalicToItalicConverter.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfBoldToBoldConverter.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\ShowingDockHintsAttachedBehavior.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfOutlinesViewerState.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfOutlinesViewerPanelStyle.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfOutlinesViewerSettings.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfCursors.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\CursorHelper.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\CursorAttachedBehavior.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\DataPagerPageNumberConverter.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PrintRangeToVisiblityConverter.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\LoadingProgressControl.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfSelectionAction.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfDocumentSelectionParameter.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\IPdfDocumentSelectionResults.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfDocumentSelectionResults.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfHitTestResult.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfDocumentOutlinesViewerProperties.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfViewerSplashScreenService.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\SelectionCanvas.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\SelectionRectangle.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\RequestPasswordEventArgs.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\DocumentProgressChangedEventArgs.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\UpdateRequiredEventArgs.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfDocumentViewModel.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\TaskContinueWithWithStateForNet45.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\LoadDocumentState.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\GetPasswordState.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfPageWrapper.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfPageControl.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfPageControlItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfElement.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfGeometry.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfCombinedGeometry.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfCaretElement.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfPagesSelector.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfPageViewModel.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfPresenterControl.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\InvalidateThumbnailsViewerRenderingAction.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\DocumentHasPagesVisibilityConverter.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\DXScrollViewer.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\CursorModeToCanMouseScrollConverter.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\CursorModeToSelectionVisibilityConverter.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfDocumentProperties.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\FileSizeConverter.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\RecentFileViewModel.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\StartScreenControl.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfResourceExtension.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\ThumbnailPageWrapper.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\ThumbnailPageControl.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfThumbnailPageControlItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\ThumbnailPageViewModel.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfThumbnailsZoomItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\ThumbnailsViewerZoomBarItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfThumbnailsViewerCommands.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\EditValueChangedEventArgsConverter.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfThumbnailsViewerControl.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\ThumbnailsViewerPagesSelector.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\ThumbnailsViewerPresenterControl.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfThumbnailsViewerState.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\PdfThumbnailsViewerSettings.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Helpers\DXMessageBoxHelper.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\UI\AddressControl.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\UI\PasswordControl.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\UI\PropertiesControl.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\UI\SearchControlContainer.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Themes\PdfViewerThemeKeys.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Themes\PdfViewerThemeKeyExtension.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Properties\Resources.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Properties\Settings.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Extensions\WinFormsCompatibilityExtensions.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Extensions\PdfDialogServiceExtensions.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Extensions\StackExtensions.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\PdfSetCursorModeItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\PdfOpenDocumentSplitItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\PdfSplitItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\CommandSetPageLayout.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\CommandShowCoverPage.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\PdfCommentCommand.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\InteractionProvider.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\PdfTargetScroll.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\TextureType.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\TextureKey.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\TextureContent.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\NotRenderedContent.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\TextureCache.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\PdfTouchController.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\PdfViewerDocumentRenderer.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\PdfViewerThumbnailsDocumentRenderer.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\RenderedContent.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\RenderedPageBase.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\RenderedPage.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\NotRenderedStub.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\RenderItem.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\PdfKeyboardAndMouseController.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\PdfPrintEditorAttachedBehavior.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\SizeChangedEventArgsConverter.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\PrintDialogDataPager.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\PrintDialogViewModel.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\ChangeTypeConverter.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\PrintRangeConverter.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\PrintRangeToRangeEditEnabledConverter.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\PrinterTypeToImageConverter.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\ScaleModeToScaleEditEnabledConverter.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\PagedCollectionView.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\IEnumerableToPagedCollectionConverter.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\PdfPrintPageOrientationConverter.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\TextBlockTextTrimmingBehavior.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\ThumbnailsBehaviorProvider.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\ThumbnailsCommandProvider.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\ThumbnailsKeyboardAndMouseController.cs" />
+    <Compile Include="DevExpress\Xpf\PdfViewer\Internal\ThumbnailsDocumentViewModel.cs" />
+    <EmbeddedResource Include="DevExpress.Xpf.PdfViewer.v19.2.g.resources" />
+    <EmbeddedResource Include="DevExpress.Xpf.PdfViewer.Properties.Resources.resources" />
+    <EmbeddedResource Include="DevExpress.Xpf.PdfViewer.LocalizationRes.resources" />
+  </ItemGroup>
+</Project>

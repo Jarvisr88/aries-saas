@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>a1cdbed3-e3ab-4513-9a6f-c0176b531f51</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>DevExpress.Images.v19.2</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v19.2" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Compile Include="Global.cs" />
+    <Compile Include="DevExpress\Images\ImageResourceCache.cs" />
+    <Compile Include="DevExpress\Images\ImageResourceKey.cs" />
+    <Compile Include="DevExpress\Images\ImageCacheUtils.cs" />
+    <Compile Include="DevExpress\Images\ImagesAssemblyImageList.cs" />
+    <Compile Include="DevExpress\Images\DXImages.cs" />
+    <Compile Include="DevExpress\Images\ImagesAssemblyLoader.cs" />
+    <Compile Include="DevExpress\Images\XAFImageInfo.cs" />
+    <Compile Include="DevExpress\Images\ImageCollectionHelper.cs" />
+    <Compile Include="DevExpress\Images\ImagesAssemblyImageInfo.cs" />
+    <Compile Include="DevExpress\Images\HiddenKeysStorage.cs" />
+    <Compile Include="DevExpress\Images\AssemblyImageReaderFactory.cs" />
+    <Compile Include="DevExpress\Images\IAssemblyImageReader.cs" />
+    <Compile Include="DevExpress\Images\AssemblyImageReaderBase.cs" />
+    <Compile Include="DevExpress\Images\AssemblyImageReader.cs" />
+    <Compile Include="DevExpress\Images\AssemblyEmbeddedImageReader.cs" />
+    <Compile Include="DevExpress\Images\DXImageServicesImp.cs" />
+    <Compile Include="DevExpress\Images\ImagesAssemblyType.cs" />
+    <Compile Include="DevExpress\Images\XAFImageList.cs" />
+    <EmbeddedResource Include="DevExpress.Images.v19.2.g.resources" />
+  </ItemGroup>
+</Project>

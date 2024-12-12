@@ -1,0 +1,152 @@
+<?xml version="1.0" ?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CMNs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="CMN">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="CoverPage" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Message" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Section_A" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Certification-Type-Date">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Initial" type="xs:string" />
+                          <xs:element name="Revised" type="xs:string" />
+                          <xs:element name="Recertification" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Patient">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="HIC-Number" type="xs:string" />
+                          <xs:element name="Name">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Whole_Name" type="xs:string" minOccurs="0" />
+                                <xs:element name="First" type="xs:string" />
+                                <xs:element name="Middle" type="xs:string" />
+                                <xs:element name="Last" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Address">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Street" type="xs:string" />
+                                <xs:element name="City" type="xs:string" />
+                                <xs:element name="State" type="xs:string" />
+                                <xs:element name="Zip" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Telephone" type="xs:string" />
+                          <xs:element name="DOB" type="xs:string" />
+                          <xs:element name="Gender" type="xs:string" />
+                          <xs:element name="Height" type="xs:unsignedShort" />
+                          <xs:element name="Weight" type="xs:unsignedShort" />
+                        </xs:sequence>
+                        <xs:attribute name="SSN" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Supplier">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Name" type="xs:string" />
+                          <xs:element name="Address">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Street" type="xs:string" />
+                                <xs:element name="City" type="xs:string" />
+                                <xs:element name="State" type="xs:string" />
+                                <xs:element name="Zip" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Telephone" type="xs:string" />
+                          <xs:element name="NSC" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Place-of-Service">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Code" />
+                          <xs:element name="Name" type="xs:string" />
+                          <xs:element name="Address">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Street" type="xs:string" />
+                                <xs:element name="City" type="xs:string" />
+                                <xs:element name="State" type="xs:string" />
+                                <xs:element name="Zip" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="HCPCS-Code">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="4" name="Code" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Physician">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="UPIN" type="xs:string" />
+                          <xs:element name="Name">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Whole_Name" type="xs:string" minOccurs="0" />
+                                <xs:element name="First" type="xs:string" />
+                                <xs:element name="Middle" type="xs:string" />
+                                <xs:element name="Last" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Address">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Street" type="xs:string" />
+                                <xs:element name="City" type="xs:string" />
+                                <xs:element name="State" type="xs:string" />
+                                <xs:element name="Zip" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Telephone" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Section_C" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Narrative" type="xs:string" maxOccurs="1" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="Form" type="xs:string" use="required" />
+            <xs:attribute name="DocumentKey" type="xs:string" use="optional" />
+            <xs:attribute name="Version" type="xs:decimal" use="optional" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

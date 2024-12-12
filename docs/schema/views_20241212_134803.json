@@ -1,0 +1,3080 @@
+{
+  "tbl_doctor": {
+    "create_statement": {
+      "View": "tbl_doctor",
+      "Create View": "CREATE ALGORITHM=MERGE DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `tbl_doctor` AS select `dmeworks`.`tbl_doctor`.`Address1` AS `Address1`,`dmeworks`.`tbl_doctor`.`Address2` AS `Address2`,`dmeworks`.`tbl_doctor`.`City` AS `City`,`dmeworks`.`tbl_doctor`.`Contact` AS `Contact`,`dmeworks`.`tbl_doctor`.`Courtesy` AS `Courtesy`,`dmeworks`.`tbl_doctor`.`Fax` AS `Fax`,`dmeworks`.`tbl_doctor`.`FirstName` AS `FirstName`,`dmeworks`.`tbl_doctor`.`ID` AS `ID`,`dmeworks`.`tbl_doctor`.`LastName` AS `LastName`,`dmeworks`.`tbl_doctor`.`LicenseNumber` AS `LicenseNumber`,`dmeworks`.`tbl_doctor`.`LicenseExpired` AS `LicenseExpired`,`dmeworks`.`tbl_doctor`.`MedicaidNumber` AS `MedicaidNumber`,`dmeworks`.`tbl_doctor`.`MiddleName` AS `MiddleName`,`dmeworks`.`tbl_doctor`.`OtherID` AS `OtherID`,`dmeworks`.`tbl_doctor`.`FEDTaxID` AS `FEDTaxID`,`dmeworks`.`tbl_doctor`.`DEANumber` AS `DEANumber`,`dmeworks`.`tbl_doctor`.`Phone` AS `Phone`,`dmeworks`.`tbl_doctor`.`Phone2` AS `Phone2`,`dmeworks`.`tbl_doctor`.`State` AS `State`,`dmeworks`.`tbl_doctor`.`Suffix` AS `Suffix`,`dmeworks`.`tbl_doctor`.`Title` AS `Title`,`dmeworks`.`tbl_doctor`.`TypeID` AS `TypeID`,`dmeworks`.`tbl_doctor`.`UPINNumber` AS `UPINNumber`,`dmeworks`.`tbl_doctor`.`Zip` AS `Zip`,`dmeworks`.`tbl_doctor`.`LastUpdateUserID` AS `LastUpdateUserID`,`dmeworks`.`tbl_doctor`.`LastUpdateDatetime` AS `LastUpdateDatetime`,`dmeworks`.`tbl_doctor`.`MIR` AS `MIR`,`dmeworks`.`tbl_doctor`.`NPI` AS `NPI`,`dmeworks`.`tbl_doctor`.`PecosEnrolled` AS `PecosEnrolled` from `dmeworks`.`tbl_doctor`",
+      "character_set_client": "latin1",
+      "collation_connection": "latin1_swedish_ci"
+    },
+    "columns": [
+      {
+        "COLUMN_NAME": "Address1",
+        "COLUMN_TYPE": "varchar(40)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "Address2",
+        "COLUMN_TYPE": "varchar(40)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "City",
+        "COLUMN_TYPE": "varchar(25)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "Contact",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "Courtesy",
+        "COLUMN_TYPE": "enum('Dr.','Miss','Mr.','Mrs.','Rev.')",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "Fax",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "FirstName",
+        "COLUMN_TYPE": "varchar(25)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "ID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "LastName",
+        "COLUMN_TYPE": "varchar(30)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "LicenseNumber",
+        "COLUMN_TYPE": "varchar(16)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "LicenseExpired",
+        "COLUMN_TYPE": "date",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "MedicaidNumber",
+        "COLUMN_TYPE": "varchar(16)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "MiddleName",
+        "COLUMN_TYPE": "varchar(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "OtherID",
+        "COLUMN_TYPE": "varchar(16)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "FEDTaxID",
+        "COLUMN_TYPE": "varchar(9)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "DEANumber",
+        "COLUMN_TYPE": "varchar(20)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "Phone",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "Phone2",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "State",
+        "COLUMN_TYPE": "varchar(2)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "Suffix",
+        "COLUMN_TYPE": "varchar(4)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "Title",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "TypeID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "UPINNumber",
+        "COLUMN_TYPE": "varchar(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "Zip",
+        "COLUMN_TYPE": "varchar(10)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "LastUpdateUserID",
+        "COLUMN_TYPE": "smallint(6)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "LastUpdateDatetime",
+        "COLUMN_TYPE": "timestamp",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0000-00-00 00:00:00",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "MIR",
+        "COLUMN_TYPE": "set('FirstName','LastName','Address1','City','State','Zip','NPI','Phone')",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "NPI",
+        "COLUMN_TYPE": "varchar(10)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "PecosEnrolled",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      }
+    ],
+    "indexes": [],
+    "foreign_keys": []
+  },
+  "tbl_doctortype": {
+    "create_statement": {
+      "View": "tbl_doctortype",
+      "Create View": "CREATE ALGORITHM=MERGE DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `tbl_doctortype` AS select `dmeworks`.`tbl_doctortype`.`ID` AS `ID`,`dmeworks`.`tbl_doctortype`.`Name` AS `Name`,`dmeworks`.`tbl_doctortype`.`LastUpdateUserID` AS `LastUpdateUserID`,`dmeworks`.`tbl_doctortype`.`LastUpdateDatetime` AS `LastUpdateDatetime` from `dmeworks`.`tbl_doctortype`",
+      "character_set_client": "latin1",
+      "collation_connection": "latin1_swedish_ci"
+    },
+    "columns": [
+      {
+        "COLUMN_NAME": "ID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "Name",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "LastUpdateUserID",
+        "COLUMN_TYPE": "smallint(6)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "LastUpdateDatetime",
+        "COLUMN_TYPE": "timestamp",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0000-00-00 00:00:00",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      }
+    ],
+    "indexes": [],
+    "foreign_keys": []
+  },
+  "tbl_icd10": {
+    "create_statement": {
+      "View": "tbl_icd10",
+      "Create View": "CREATE ALGORITHM=MERGE DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `tbl_icd10` AS select `dmeworks`.`tbl_icd10`.`Code` AS `Code`,`dmeworks`.`tbl_icd10`.`Description` AS `Description`,`dmeworks`.`tbl_icd10`.`Header` AS `Header`,`dmeworks`.`tbl_icd10`.`ActiveDate` AS `ActiveDate`,`dmeworks`.`tbl_icd10`.`InactiveDate` AS `InactiveDate`,`dmeworks`.`tbl_icd10`.`LastUpdateUserID` AS `LastUpdateUserID`,`dmeworks`.`tbl_icd10`.`LastUpdateDatetime` AS `LastUpdateDatetime` from `dmeworks`.`tbl_icd10` where (`dmeworks`.`tbl_icd10`.`Header` = 0)",
+      "character_set_client": "latin1",
+      "collation_connection": "latin1_swedish_ci"
+    },
+    "columns": [
+      {
+        "COLUMN_NAME": "Code",
+        "COLUMN_TYPE": "varchar(8)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "Description",
+        "COLUMN_TYPE": "varchar(255)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "Header",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "ActiveDate",
+        "COLUMN_TYPE": "date",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "InactiveDate",
+        "COLUMN_TYPE": "date",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "LastUpdateUserID",
+        "COLUMN_TYPE": "smallint(6)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "LastUpdateDatetime",
+        "COLUMN_TYPE": "timestamp",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0000-00-00 00:00:00",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      }
+    ],
+    "indexes": [],
+    "foreign_keys": []
+  },
+  "tbl_icd9": {
+    "create_statement": {
+      "View": "tbl_icd9",
+      "Create View": "CREATE ALGORITHM=MERGE DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `tbl_icd9` AS select `dmeworks`.`tbl_icd9`.`Code` AS `Code`,`dmeworks`.`tbl_icd9`.`Description` AS `Description`,`dmeworks`.`tbl_icd9`.`ActiveDate` AS `ActiveDate`,`dmeworks`.`tbl_icd9`.`InactiveDate` AS `InactiveDate`,`dmeworks`.`tbl_icd9`.`LastUpdateUserID` AS `LastUpdateUserID`,`dmeworks`.`tbl_icd9`.`LastUpdateDatetime` AS `LastUpdateDatetime` from `dmeworks`.`tbl_icd9`",
+      "character_set_client": "latin1",
+      "collation_connection": "latin1_swedish_ci"
+    },
+    "columns": [
+      {
+        "COLUMN_NAME": "Code",
+        "COLUMN_TYPE": "varchar(6)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "Description",
+        "COLUMN_TYPE": "varchar(255)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "ActiveDate",
+        "COLUMN_TYPE": "date",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "InactiveDate",
+        "COLUMN_TYPE": "date",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "LastUpdateUserID",
+        "COLUMN_TYPE": "smallint(6)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "LastUpdateDatetime",
+        "COLUMN_TYPE": "timestamp",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0000-00-00 00:00:00",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      }
+    ],
+    "indexes": [],
+    "foreign_keys": []
+  },
+  "tbl_insurancecompany": {
+    "create_statement": {
+      "View": "tbl_insurancecompany",
+      "Create View": "CREATE ALGORITHM=MERGE DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `tbl_insurancecompany` AS select `dmeworks`.`tbl_insurancecompany`.`Address1` AS `Address1`,`dmeworks`.`tbl_insurancecompany`.`Address2` AS `Address2`,`dmeworks`.`tbl_insurancecompany`.`Basis` AS `Basis`,`dmeworks`.`tbl_insurancecompany`.`City` AS `City`,`dmeworks`.`tbl_insurancecompany`.`Contact` AS `Contact`,`dmeworks`.`tbl_insurancecompany`.`ECSFormat` AS `ECSFormat`,`dmeworks`.`tbl_insurancecompany`.`ExpectedPercent` AS `ExpectedPercent`,`dmeworks`.`tbl_insurancecompany`.`Fax` AS `Fax`,`dmeworks`.`tbl_insurancecompany`.`ID` AS `ID`,`dmeworks`.`tbl_insurancecompany`.`Name` AS `Name`,`dmeworks`.`tbl_insurancecompany`.`Phone` AS `Phone`,`dmeworks`.`tbl_insurancecompany`.`Phone2` AS `Phone2`,`dmeworks`.`tbl_insurancecompany`.`PriceCodeID` AS `PriceCodeID`,`dmeworks`.`tbl_insurancecompany`.`PrintHAOOnInvoice` AS `PrintHAOOnInvoice`,`dmeworks`.`tbl_insurancecompany`.`PrintInvOnInvoice` AS `PrintInvOnInvoice`,`dmeworks`.`tbl_insurancecompany`.`State` AS `State`,`dmeworks`.`tbl_insurancecompany`.`Title` AS `Title`,`dmeworks`.`tbl_insurancecompany`.`Type` AS `Type`,`dmeworks`.`tbl_insurancecompany`.`Zip` AS `Zip`,`dmeworks`.`tbl_insurancecompany`.`MedicareNumber` AS `MedicareNumber`,`dmeworks`.`tbl_insurancecompany`.`OfficeAllyNumber` AS `OfficeAllyNumber`,`dmeworks`.`tbl_insurancecompany`.`ZirmedNumber` AS `ZirmedNumber`,`dmeworks`.`tbl_insurancecompany`.`LastUpdateUserID` AS `LastUpdateUserID`,`dmeworks`.`tbl_insurancecompany`.`LastUpdateDatetime` AS `LastUpdateDatetime`,`dmeworks`.`tbl_insurancecompany`.`InvoiceFormID` AS `InvoiceFormID`,`dmeworks`.`tbl_insurancecompany`.`MedicaidNumber` AS `MedicaidNumber`,`dmeworks`.`tbl_insurancecompany`.`MIR` AS `MIR`,`dmeworks`.`tbl_insurancecompany`.`GroupID` AS `GroupID`,`dmeworks`.`tbl_insurancecompany`.`AvailityNumber` AS `AvailityNumber`,`dmeworks`.`tbl_insurancecompany`.`AbilityNumber` AS `AbilityNumber` from `dmeworks`.`tbl_insurancecompany`",
+      "character_set_client": "latin1",
+      "collation_connection": "latin1_swedish_ci"
+    },
+    "columns": [
+      {
+        "COLUMN_NAME": "Address1",
+        "COLUMN_TYPE": "varchar(40)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "Address2",
+        "COLUMN_TYPE": "varchar(40)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "Basis",
+        "COLUMN_TYPE": "enum('Bill','Allowed')",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "Bill",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "City",
+        "COLUMN_TYPE": "varchar(25)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "Contact",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "ECSFormat",
+        "COLUMN_TYPE": "enum('Region A','Region B','Region C','Region D','Zirmed','Medi-Cal','Availity','Office Ally','Ability')",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "Region A",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "ExpectedPercent",
+        "COLUMN_TYPE": "double",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "Fax",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "ID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "Name",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "Phone",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "Phone2",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "PriceCodeID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "PrintHAOOnInvoice",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "PrintInvOnInvoice",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "State",
+        "COLUMN_TYPE": "char(2)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "Title",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "Type",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "Zip",
+        "COLUMN_TYPE": "varchar(10)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "MedicareNumber",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "OfficeAllyNumber",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "ZirmedNumber",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "LastUpdateUserID",
+        "COLUMN_TYPE": "smallint(6)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "LastUpdateDatetime",
+        "COLUMN_TYPE": "timestamp",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0000-00-00 00:00:00",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "InvoiceFormID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "MedicaidNumber",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "MIR",
+        "COLUMN_TYPE": "set('MedicareNumber')",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "GroupID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "AvailityNumber",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "AbilityNumber",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      }
+    ],
+    "indexes": [],
+    "foreign_keys": []
+  },
+  "tbl_insurancecompanygroup": {
+    "create_statement": {
+      "View": "tbl_insurancecompanygroup",
+      "Create View": "CREATE ALGORITHM=MERGE DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `tbl_insurancecompanygroup` AS select `dmeworks`.`tbl_insurancecompanygroup`.`ID` AS `ID`,`dmeworks`.`tbl_insurancecompanygroup`.`Name` AS `Name`,`dmeworks`.`tbl_insurancecompanygroup`.`LastUpdateUserID` AS `LastUpdateUserID`,`dmeworks`.`tbl_insurancecompanygroup`.`LastUpdateDatetime` AS `LastUpdateDatetime` from `dmeworks`.`tbl_insurancecompanygroup`",
+      "character_set_client": "latin1",
+      "collation_connection": "latin1_swedish_ci"
+    },
+    "columns": [
+      {
+        "COLUMN_NAME": "ID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "Name",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "LastUpdateUserID",
+        "COLUMN_TYPE": "smallint(6)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "LastUpdateDatetime",
+        "COLUMN_TYPE": "timestamp",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0000-00-00 00:00:00",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      }
+    ],
+    "indexes": [],
+    "foreign_keys": []
+  },
+  "tbl_insurancecompanytype": {
+    "create_statement": {
+      "View": "tbl_insurancecompanytype",
+      "Create View": "CREATE ALGORITHM=MERGE DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `tbl_insurancecompanytype` AS select `dmeworks`.`tbl_insurancecompanytype`.`ID` AS `ID`,`dmeworks`.`tbl_insurancecompanytype`.`Name` AS `Name` from `dmeworks`.`tbl_insurancecompanytype`",
+      "character_set_client": "latin1",
+      "collation_connection": "latin1_swedish_ci"
+    },
+    "columns": [
+      {
+        "COLUMN_NAME": "ID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "Name",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      }
+    ],
+    "indexes": [],
+    "foreign_keys": []
+  },
+  "tbl_zipcode": {
+    "create_statement": {
+      "View": "tbl_zipcode",
+      "Create View": "CREATE ALGORITHM=MERGE DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `tbl_zipcode` AS select `dmeworks`.`tbl_zipcode`.`Zip` AS `Zip`,`dmeworks`.`tbl_zipcode`.`State` AS `State`,`dmeworks`.`tbl_zipcode`.`City` AS `City` from `dmeworks`.`tbl_zipcode`",
+      "character_set_client": "latin1",
+      "collation_connection": "latin1_swedish_ci"
+    },
+    "columns": [
+      {
+        "COLUMN_NAME": "Zip",
+        "COLUMN_TYPE": "varchar(10)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "State",
+        "COLUMN_TYPE": "varchar(2)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "City",
+        "COLUMN_TYPE": "varchar(30)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      }
+    ],
+    "indexes": [],
+    "foreign_keys": []
+  },
+  "view_billinglist": {
+    "create_statement": {
+      "View": "view_billinglist",
+      "Create View": "CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_billinglist` AS select distinct `details`.`OrderID` AS `OrderID`,if((`details`.`BillingMonth` <= 0),1,`details`.`BillingMonth`) AS `BillingMonth`,(((((if(((`tbl_order`.`CustomerInsurance1_ID` is not null) and (`details`.`BillIns1` = 1)),1,0) + if(((`tbl_order`.`CustomerInsurance2_ID` is not null) and (`details`.`BillIns2` = 1)),2,0)) + if(((`tbl_order`.`CustomerInsurance3_ID` is not null) and (`details`.`BillIns3` = 1)),4,0)) + if(((`tbl_order`.`CustomerInsurance4_ID` is not null) and (`details`.`BillIns4` = 1)),8,0)) + if((`details`.`EndDate` is not null),32,0)) + if((`details`.`AcceptAssignment` = 1),16,0)) AS `BillingFlags`,`tbl_customer`.`BillingTypeID` AS `BillingTypeID` from ((`view_orderdetails_core` `details` join `tbl_order` on(((`tbl_order`.`ID` = `details`.`OrderID`) and (`tbl_order`.`CustomerID` = `details`.`CustomerID`)))) left join `tbl_customer` on((`tbl_customer`.`ID` = `tbl_order`.`CustomerID`))) where (((`details`.`InvoiceDate` <= curdate()) or (`details`.`EndDate` <= curdate())) and (`details`.`MIR` = '') and (`details`.`IsActive` = 1) and (isnull(`details`.`EndDate`) or (`tbl_order`.`BillDate` < `details`.`EndDate`)) and (`tbl_order`.`MIR` = '') and (`tbl_order`.`Approved` = 1) and (`tbl_order`.`OrderDate` is not null) and (`tbl_order`.`BillDate` is not null))",
+      "character_set_client": "latin1",
+      "collation_connection": "latin1_swedish_ci"
+    },
+    "columns": [
+      {
+        "COLUMN_NAME": "OrderID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "BillingMonth",
+        "COLUMN_TYPE": "bigint(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "BillingFlags",
+        "COLUMN_TYPE": "int(7)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "BillingTypeID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      }
+    ],
+    "indexes": [],
+    "foreign_keys": []
+  },
+  "view_invoicetransaction_statistics": {
+    "create_statement": {
+      "View": "view_invoicetransaction_statistics",
+      "Create View": "CREATE ALGORITHM=MERGE DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_invoicetransaction_statistics` AS select sql_small_result `detail`.`CustomerID` AS `CustomerID`,`detail`.`OrderID` AS `OrderID`,`detail`.`InvoiceID` AS `InvoiceID`,`detail`.`ID` AS `InvoiceDetailsID`,`detail`.`BillableAmount` AS `BillableAmount`,`detail`.`AllowableAmount` AS `AllowableAmount`,`detail`.`Quantity` AS `Quantity`,`detail`.`Hardship` AS `Hardship`,`detail`.`BillingCode` AS `BillingCode`,`detail`.`InventoryItemID` AS `InventoryItemID`,`detail`.`DOSFrom` AS `DOSFrom`,`detail`.`DOSTo` AS `DOSTo`,`insurance1`.`ID` AS `Insurance1_ID`,`insurance2`.`ID` AS `Insurance2_ID`,`insurance3`.`ID` AS `Insurance3_ID`,`insurance4`.`ID` AS `Insurance4_ID`,`insurance1`.`InsuranceCompanyID` AS `InsuranceCompany1_ID`,`insurance2`.`InsuranceCompanyID` AS `InsuranceCompany2_ID`,`insurance3`.`InsuranceCompanyID` AS `InsuranceCompany3_ID`,`insurance4`.`InsuranceCompanyID` AS `InsuranceCompany4_ID`,(case when (ifnull(`insurance1`.`PaymentPercent`,0) < 0) then 0 when (100 < ifnull(`insurance1`.`PaymentPercent`,0)) then 100 else ifnull(`insurance1`.`PaymentPercent`,0) end) AS `Percent`,ifnull(`insurance1`.`Basis`,'Bill') AS `Basis`,`detail`.`PaymentAmount` AS `PaymentAmount`,`detail`.`WriteoffAmount` AS `WriteoffAmount`,((((if((`insurance1`.`ID` is not null),1,0) + if((`insurance2`.`ID` is not null),2,0)) + if((`insurance3`.`ID` is not null),4,0)) + if((`insurance4`.`ID` is not null),8,0)) + if((1 = 1),16,0)) AS `Insurances`,((((if((`insurance1`.`ID` is not null),(`detail`.`Pendings` & 1),0) + if((`insurance2`.`ID` is not null),(`detail`.`Pendings` & 2),0)) + if((`insurance3`.`ID` is not null),(`detail`.`Pendings` & 4),0)) + if((`insurance4`.`ID` is not null),(`detail`.`Pendings` & 8),0)) + if((1 = 1),(`detail`.`Pendings` & 16),0)) AS `PendingSubmissions`,((((if((`insurance1`.`ID` is not null),(`detail`.`Submits` & 1),0) + if((`insurance2`.`ID` is not null),(`detail`.`Submits` & 2),0)) + if((`insurance3`.`ID` is not null),(`detail`.`Submits` & 4),0)) + if((`insurance4`.`ID` is not null),(`detail`.`Submits` & 8),0)) + if((1 = 1),(`detail`.`Submits` & 16),0)) AS `Submits`,((((if((`insurance1`.`ID` is not null),(`detail`.`Payments` & 1),0) + if((`insurance2`.`ID` is not null),(`detail`.`Payments` & 2),0)) + if((`insurance3`.`ID` is not null),(`detail`.`Payments` & 4),0)) + if((`insurance4`.`ID` is not null),(`detail`.`Payments` & 8),0)) + if((1 = 1),(`detail`.`Payments` & 16),0)) AS `Payments`,`detail`.`CurrentCustomerInsuranceID` AS `CurrentInsuranceID`,`detail`.`CurrentInsuranceCompanyID` AS `CurrentInsuranceCompanyID`,`detail`.`Submitted` AS `InvoiceSubmitted`,`detail`.`SubmittedDate` AS `SubmittedDate`,`detail`.`CurrentPayer` AS `CurrentPayer`,`detail`.`NopayIns1` AS `NopayIns1` from (((((`tbl_invoicedetails` `detail` join `tbl_invoice` `invoice` on(((`invoice`.`CustomerID` = `detail`.`CustomerID`) and (`invoice`.`ID` = `detail`.`InvoiceID`)))) left join `tbl_customer_insurance` `insurance1` on(((`insurance1`.`ID` = `invoice`.`CustomerInsurance1_ID`) and (`insurance1`.`CustomerID` = `invoice`.`CustomerID`) and (`detail`.`BillIns1` = 1)))) left join `tbl_customer_insurance` `insurance2` on(((`insurance2`.`ID` = `invoice`.`CustomerInsurance2_ID`) and (`insurance2`.`CustomerID` = `invoice`.`CustomerID`) and (`detail`.`BillIns2` = 1)))) left join `tbl_customer_insurance` `insurance3` on(((`insurance3`.`ID` = `invoice`.`CustomerInsurance3_ID`) and (`insurance3`.`CustomerID` = `invoice`.`CustomerID`) and (`detail`.`BillIns3` = 1)))) left join `tbl_customer_insurance` `insurance4` on(((`insurance4`.`ID` = `invoice`.`CustomerInsurance4_ID`) and (`insurance4`.`CustomerID` = `invoice`.`CustomerID`) and (`detail`.`BillIns4` = 1))))",
+      "character_set_client": "latin1",
+      "collation_connection": "latin1_swedish_ci"
+    },
+    "columns": [
+      {
+        "COLUMN_NAME": "CustomerID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "OrderID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "InvoiceID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "InvoiceDetailsID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "BillableAmount",
+        "COLUMN_TYPE": "decimal(18,2)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0.00",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "AllowableAmount",
+        "COLUMN_TYPE": "decimal(18,2)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0.00",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "Quantity",
+        "COLUMN_TYPE": "double",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "Hardship",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "BillingCode",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "InventoryItemID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "DOSFrom",
+        "COLUMN_TYPE": "date",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0000-00-00",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "DOSTo",
+        "COLUMN_TYPE": "date",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "Insurance1_ID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "Insurance2_ID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "Insurance3_ID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "Insurance4_ID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "InsuranceCompany1_ID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "InsuranceCompany2_ID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "InsuranceCompany3_ID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "InsuranceCompany4_ID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "Percent",
+        "COLUMN_TYPE": "bigint(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "Basis",
+        "COLUMN_TYPE": "varchar(7)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "PaymentAmount",
+        "COLUMN_TYPE": "decimal(18,2)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0.00",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "WriteoffAmount",
+        "COLUMN_TYPE": "decimal(18,2)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0.00",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "Insurances",
+        "COLUMN_TYPE": "int(6)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "PendingSubmissions",
+        "COLUMN_TYPE": "decimal(25,0)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "Submits",
+        "COLUMN_TYPE": "decimal(25,0)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "Payments",
+        "COLUMN_TYPE": "decimal(25,0)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "CurrentInsuranceID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "CurrentInsuranceCompanyID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "InvoiceSubmitted",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "SubmittedDate",
+        "COLUMN_TYPE": "date",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "CurrentPayer",
+        "COLUMN_TYPE": "enum('Ins1','Ins2','Ins3','Ins4','Patient','None')",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "Ins1",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "NopayIns1",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      }
+    ],
+    "indexes": [],
+    "foreign_keys": []
+  },
+  "view_mir": {
+    "create_statement": {
+      "View": "view_mir",
+      "Create View": "CREATE ALGORITHM=MERGE DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_mir` AS select `tbl_details`.`ID` AS `OrderDetailsID`,`c01`.`tbl_order`.`ID` AS `OrderID`,`c01`.`tbl_order`.`Approved` AS `OrderApproved`,`c01`.`tbl_customer`.`ID` AS `CustomerID`,concat(`c01`.`tbl_customer`.`LastName`,' ',`c01`.`tbl_customer`.`FirstName`) AS `CustomerName`,`policy1`.`ID` AS `CustomerInsuranceID_1`,`insco1`.`ID` AS `InsuranceCompanyID_1`,`policy2`.`ID` AS `CustomerInsuranceID_2`,`insco2`.`ID` AS `InsuranceCompanyID_2`,`c01`.`tbl_cmnform`.`ID` AS `CMNFormID`,`c01`.`tbl_facility`.`ID` AS `FacilityID`,`tbl_doctor`.`ID` AS `DoctorID`,`tbl_details`.`SaleRentType` AS `SaleRentType`,`tbl_details`.`BillingCode` AS `BillingCode`,concat_ws(', ',if((`tbl_details`.`BillIns1` = 1),'Ins1',NULL),if((`tbl_details`.`BillIns2` = 1),'Ins2',NULL),if((`tbl_details`.`BillIns3` = 1),'Ins3',NULL),if((`tbl_details`.`BillIns4` = 1),'Ins4',NULL),'Patient') AS `Payers`,`c01`.`tbl_inventoryitem`.`Name` AS `InventoryItem`,`c01`.`tbl_pricecode`.`Name` AS `PriceCode`,concat_ws(', ',if((`c01`.`tbl_order`.`MIR` <> ''),'order',NULL),if((`tbl_details`.`MIR` <> ''),'details',NULL),if((0 < find_in_set('CustomerID',`c01`.`tbl_order`.`MIR`)),'customer required',NULL),if((0 < find_in_set('Customer.Inactive',`c01`.`tbl_order`.`MIR`)),'customer inactive',NULL),if((0 < find_in_set('Customer.MIR',`c01`.`tbl_order`.`MIR`)),'customer',NULL),if((0 < find_in_set('Facility.MIR',`c01`.`tbl_order`.`MIR`)),'facility',NULL),if((0 < find_in_set('Policy1.Required',`c01`.`tbl_order`.`MIR`)),'policy1 required',NULL),if((0 < find_in_set('Policy1.MIR',`c01`.`tbl_order`.`MIR`)),'policy1',NULL),if((0 < find_in_set('Policy2.Required',`c01`.`tbl_order`.`MIR`)),'policy2 required',NULL),if((0 < find_in_set('Policy2.MIR',`c01`.`tbl_order`.`MIR`)),'policy2',NULL),if((0 < find_in_set('CMNForm.Required',`tbl_details`.`MIR`)),'cmn form required',NULL),if((0 < find_in_set('CMNForm.MIR',`tbl_details`.`MIR`)),'cmn form',NULL),if((0 < find_in_set('Answers',`c01`.`tbl_cmnform`.`MIR`)),'cmn answers',NULL),NULL) AS `MIR`,concat_ws('\\r\\n',if((`c01`.`tbl_order`.`MIR` <> ''),replace(concat('Order: ',cast(`c01`.`tbl_order`.`MIR` as char charset latin1)),',',', '),NULL),if((`tbl_details`.`MIR` <> ''),replace(concat('Details: ',cast(`tbl_details`.`MIR` as char charset latin1)),',',', '),NULL),if((`c01`.`tbl_customer`.`MIR` <> ''),replace(concat('Customer: ',cast(`c01`.`tbl_customer`.`MIR` as char charset latin1)),',',', '),NULL),if((`tbl_doctor`.`MIR` <> ''),replace(concat('Doctor: ',cast(`tbl_doctor`.`MIR` as char charset latin1)),',',', '),NULL),if((`policy1`.`MIR` <> ''),replace(concat('Policy 1: ',cast(`policy1`.`MIR` as char charset latin1)),',',', '),NULL),if((`insco1`.`MIR` <> ''),replace(concat('Ins Co 1: ',cast(`insco1`.`MIR` as char charset latin1)),',',', '),NULL),if((`policy2`.`MIR` <> ''),replace(concat('Policy 2: ',cast(`policy2`.`MIR` as char charset latin1)),',',', '),NULL),if((`insco2`.`MIR` <> ''),replace(concat('Ins Co 2: ',cast(`insco2`.`MIR` as char charset latin1)),',',', '),NULL),if((`c01`.`tbl_cmnform`.`MIR` <> ''),replace(concat('CMN Form: ',cast(`c01`.`tbl_cmnform`.`MIR` as char charset latin1)),',',', '),NULL),if((`c01`.`tbl_facility`.`MIR` <> ''),replace(concat('Facility: ',cast(`c01`.`tbl_facility`.`MIR` as char charset latin1)),',',', '),NULL),NULL) AS `Details` from ((((((((((((`c01`.`view_orderdetails_core` `tbl_details` join `c01`.`tbl_order` on(((`tbl_details`.`OrderID` = `c01`.`tbl_order`.`ID`) and (`tbl_details`.`CustomerID` = `c01`.`tbl_order`.`CustomerID`)))) join `c01`.`tbl_customer` on((`tbl_details`.`CustomerID` = `c01`.`tbl_customer`.`ID`))) left join `c01`.`tbl_doctor` on((`c01`.`tbl_customer`.`Doctor1_ID` = `tbl_doctor`.`ID`))) left join `c01`.`tbl_facility` on((`c01`.`tbl_order`.`FacilityID` = `c01`.`tbl_facility`.`ID`))) left join `c01`.`tbl_cmnform` on(((`tbl_details`.`CMNFormID` = `c01`.`tbl_cmnform`.`ID`) and (`tbl_details`.`CustomerID` = `c01`.`tbl_cmnform`.`CustomerID`)))) left join `c01`.`tbl_inventoryitem` on((`tbl_details`.`InventoryItemID` = `c01`.`tbl_inventoryitem`.`ID`))) left join `c01`.`tbl_pricecode` on((`tbl_details`.`PriceCodeID` = `c01`.`tbl_pricecode`.`ID`))) left join `c01`.`tbl_customer_insurance` `policy1` on(((`policy1`.`CustomerID` = `c01`.`tbl_order`.`CustomerID`) and (`policy1`.`ID` = `c01`.`tbl_order`.`CustomerInsurance1_ID`)))) left join `c01`.`tbl_insurancecompany` `insco1` on((`insco1`.`ID` = `policy1`.`InsuranceCompanyID`))) left join `c01`.`tbl_customer_insurance` `policy2` on(((`policy2`.`CustomerID` = `c01`.`tbl_order`.`CustomerID`) and (`policy2`.`ID` = `c01`.`tbl_order`.`CustomerInsurance2_ID`) and (`tbl_details`.`BillIns2` = 1)))) left join `c01`.`tbl_insurancecompany` `insco2` on((`insco2`.`ID` = `policy2`.`InsuranceCompanyID`))) join `c01`.`tbl_company` on((`c01`.`tbl_company`.`ID` = 1))) where (((`c01`.`tbl_company`.`Show_InactiveCustomers` = 1) or isnull(`c01`.`tbl_customer`.`InactiveDate`) or (now() < `c01`.`tbl_customer`.`InactiveDate`)) and (`tbl_details`.`IsActive` = 1) and ((`tbl_details`.`MIR` <> '') or (`c01`.`tbl_order`.`MIR` <> '')))",
+      "character_set_client": "latin1",
+      "collation_connection": "latin1_swedish_ci"
+    },
+    "columns": [
+      {
+        "COLUMN_NAME": "OrderDetailsID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "OrderID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "OrderApproved",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "CustomerID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "CustomerName",
+        "COLUMN_TYPE": "varchar(56)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "CustomerInsuranceID_1",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "InsuranceCompanyID_1",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "CustomerInsuranceID_2",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "InsuranceCompanyID_2",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "CMNFormID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "FacilityID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "DoctorID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "SaleRentType",
+        "COLUMN_TYPE": "enum('Medicare Oxygen Rental','One Time Rental','Monthly Rental','Capped Rental','Parental Capped Rental','Rent to Purchase','One Time Sale','Re-occurring Sale')",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "Monthly Rental",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "BillingCode",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "Payers",
+        "COLUMN_TYPE": "varchar(31)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_swedish_ci"
+      },
+      {
+        "COLUMN_NAME": "InventoryItem",
+        "COLUMN_TYPE": "varchar(100)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "PriceCode",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "MIR",
+        "COLUMN_TYPE": "varchar(170)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_swedish_ci"
+      },
+      {
+        "COLUMN_NAME": "Details",
+        "COLUMN_TYPE": "text",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_swedish_ci"
+      }
+    ],
+    "indexes": [],
+    "foreign_keys": []
+  },
+  "view_orderdetails": {
+    "create_statement": {
+      "View": "view_orderdetails",
+      "Create View": "CREATE ALGORITHM=MERGE DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_orderdetails` AS select `det`.`ID` AS `ID`,`det`.`OrderID` AS `OrderID`,`det`.`CustomerID` AS `CustomerID`,`det`.`SerialNumber` AS `SerialNumber`,`det`.`InventoryItemID` AS `InventoryItemID`,`det`.`PriceCodeID` AS `PriceCodeID`,`det`.`SaleRentType` AS `SaleRentType`,`det`.`SerialID` AS `SerialID`,`det`.`BillablePrice` AS `BillablePrice`,`det`.`AllowablePrice` AS `AllowablePrice`,`det`.`Taxable` AS `Taxable`,`det`.`FlatRate` AS `FlatRate`,`det`.`DOSFrom` AS `DOSFrom`,`det`.`DOSTo` AS `DOSTo`,`det`.`PickupDate` AS `PickupDate`,`det`.`ShowSpanDates` AS `ShowSpanDates`,`det`.`OrderedQuantity` AS `OrderedQuantity`,`det`.`OrderedUnits` AS `OrderedUnits`,`det`.`OrderedWhen` AS `OrderedWhen`,`det`.`OrderedConverter` AS `OrderedConverter`,`det`.`BilledQuantity` AS `BilledQuantity`,`det`.`BilledUnits` AS `BilledUnits`,`det`.`BilledWhen` AS `BilledWhen`,`det`.`BilledConverter` AS `BilledConverter`,`det`.`DeliveryQuantity` AS `DeliveryQuantity`,`det`.`DeliveryUnits` AS `DeliveryUnits`,`det`.`DeliveryConverter` AS `DeliveryConverter`,`det`.`BillingCode` AS `BillingCode`,`det`.`Modifier1` AS `Modifier1`,`det`.`Modifier2` AS `Modifier2`,`det`.`Modifier3` AS `Modifier3`,`det`.`Modifier4` AS `Modifier4`,`det`.`DXPointer` AS `DXPointer`,`det`.`BillingMonth` AS `BillingMonth`,`det`.`BillItemOn` AS `BillItemOn`,`det`.`AuthorizationNumber` AS `AuthorizationNumber`,`det`.`AuthorizationTypeID` AS `AuthorizationTypeID`,`det`.`ReasonForPickup` AS `ReasonForPickup`,`det`.`SendCMN_RX_w_invoice` AS `SendCMN_RX_w_invoice`,`det`.`MedicallyUnnecessary` AS `MedicallyUnnecessary`,`det`.`Sale` AS `Sale`,`det`.`SpecialCode` AS `SpecialCode`,`det`.`ReviewCode` AS `ReviewCode`,`det`.`NextOrderID` AS `NextOrderID`,`det`.`ReoccuringID` AS `ReoccuringID`,`det`.`CMNFormID` AS `CMNFormID`,`det`.`HAOCode` AS `HAOCode`,`det`.`State` AS `State`,`det`.`BillIns1` AS `BillIns1`,`det`.`BillIns2` AS `BillIns2`,`det`.`BillIns3` AS `BillIns3`,`det`.`BillIns4` AS `BillIns4`,`det`.`EndDate` AS `EndDate`,`det`.`MIR` AS `MIR`,`det`.`NextBillingDate` AS `NextBillingDate`,`det`.`WarehouseID` AS `WarehouseID`,`det`.`AcceptAssignment` AS `AcceptAssignment`,`det`.`DrugNoteField` AS `DrugNoteField`,`det`.`DrugControlNumber` AS `DrugControlNumber`,`det`.`NopayIns1` AS `NopayIns1`,`det`.`PointerICD10` AS `PointerICD10`,`det`.`DXPointer10` AS `DXPointer10`,`det`.`MIR.ORDER` AS `MIR.ORDER`,`det`.`HaoDescription` AS `HaoDescription`,`det`.`UserField1` AS `UserField1`,`det`.`UserField2` AS `UserField2`,`det`.`AuthorizationExpirationDate` AS `AuthorizationExpirationDate`,`det`.`IsActive` AS `IsActive`,`det`.`IsCanceled` AS `IsCanceled`,`det`.`IsSold` AS `IsSold`,`det`.`IsRented` AS `IsRented`,`det`.`ActualSaleRentType` AS `ActualSaleRentType`,`det`.`ActualBillItemOn` AS `ActualBillItemOn`,`det`.`ActualOrderedWhen` AS `ActualOrderedWhen`,`det`.`ActualBilledWhen` AS `ActualBilledWhen`,`det`.`ActualDosTo` AS `ActualDosTo`,`det`.`InvoiceDate` AS `InvoiceDate`,`det`.`IsOxygen` AS `IsOxygen`,`det`.`IsZeroAmount` AS `IsZeroAmount`,(case when (((`det`.`State` = 'Pickup') and (`det`.`EndDate` is not null)) or ((`det`.`State` = 'Closed') and (`OrderMustBeClosed`(`ord`.`DeliveryDate`,`det`.`DOSFrom`,`det`.`ActualSaleRentType`,`det`.`BillingMonth`,`det`.`Modifier1`,`det`.`Modifier2`,`det`.`Modifier3`,`det`.`Modifier4`) = 0))) then 1 else 0 end) AS `IsPickedup` from (`view_orderdetails_core` `det` join `tbl_order` `ord` on(((`det`.`CustomerID` = `ord`.`CustomerID`) and (`det`.`OrderID` = `ord`.`ID`))))",
+      "character_set_client": "latin1",
+      "collation_connection": "latin1_swedish_ci"
+    },
+    "columns": [
+      {
+        "COLUMN_NAME": "ID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "OrderID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "CustomerID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "SerialNumber",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "InventoryItemID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "PriceCodeID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "SaleRentType",
+        "COLUMN_TYPE": "enum('Medicare Oxygen Rental','One Time Rental','Monthly Rental','Capped Rental','Parental Capped Rental','Rent to Purchase','One Time Sale','Re-occurring Sale')",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "Monthly Rental",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "SerialID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "BillablePrice",
+        "COLUMN_TYPE": "decimal(18,2)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0.00",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "AllowablePrice",
+        "COLUMN_TYPE": "decimal(18,2)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0.00",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "Taxable",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "FlatRate",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "DOSFrom",
+        "COLUMN_TYPE": "date",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0000-00-00",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "DOSTo",
+        "COLUMN_TYPE": "date",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "PickupDate",
+        "COLUMN_TYPE": "date",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "ShowSpanDates",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "OrderedQuantity",
+        "COLUMN_TYPE": "double",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "OrderedUnits",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "OrderedWhen",
+        "COLUMN_TYPE": "enum('One time','Daily','Weekly','Monthly','Quarterly','Semi-Annually','Annually')",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "One time",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "OrderedConverter",
+        "COLUMN_TYPE": "double",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "1",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "BilledQuantity",
+        "COLUMN_TYPE": "double",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "BilledUnits",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "BilledWhen",
+        "COLUMN_TYPE": "enum('One time','Daily','Weekly','Monthly','Calendar Monthly','Quarterly','Semi-Annually','Annually','Custom')",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "One time",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "BilledConverter",
+        "COLUMN_TYPE": "double",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "1",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "DeliveryQuantity",
+        "COLUMN_TYPE": "double",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "DeliveryUnits",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "DeliveryConverter",
+        "COLUMN_TYPE": "double",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "1",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "BillingCode",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "Modifier1",
+        "COLUMN_TYPE": "varchar(8)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "Modifier2",
+        "COLUMN_TYPE": "varchar(8)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "Modifier3",
+        "COLUMN_TYPE": "varchar(8)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "Modifier4",
+        "COLUMN_TYPE": "varchar(8)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "DXPointer",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "BillingMonth",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "1",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "BillItemOn",
+        "COLUMN_TYPE": "enum('Day of Delivery','Last day of the Month','Last day of the Period','Day of Pick-up')",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "Day of Delivery",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "AuthorizationNumber",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "AuthorizationTypeID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "ReasonForPickup",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "SendCMN_RX_w_invoice",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "MedicallyUnnecessary",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "Sale",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "SpecialCode",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "ReviewCode",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "NextOrderID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "ReoccuringID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "CMNFormID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "HAOCode",
+        "COLUMN_TYPE": "varchar(10)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "State",
+        "COLUMN_TYPE": "enum('New','Approved','Pickup','Closed','Canceled')",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "New",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "BillIns1",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "1",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "BillIns2",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "1",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "BillIns3",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "1",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "BillIns4",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "1",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "EndDate",
+        "COLUMN_TYPE": "date",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "MIR",
+        "COLUMN_TYPE": "set('InventoryItemID','PriceCodeID','SaleRentType','OrderedQuantity','OrderedUnits','OrderedWhen','OrderedConverter','BilledQuantity','BilledUnits','BilledWhen','BilledConverter','DeliveryQuantity','DeliveryUnits','DeliveryConverter','BillingCode','BillItemOn','DXPointer9','DXPointer10','Modifier1','Modifier2','Modifier3','CMNForm.Required','CMNForm.RecertificationDate','CMNForm.FormExpired','CMNForm.MIR','EndDate.Invalid','EndDate.Unconfirmed','AuthorizationNumber.Expired','AuthorizationNumber.Expires')",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "NextBillingDate",
+        "COLUMN_TYPE": "date",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "WarehouseID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "AcceptAssignment",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "DrugNoteField",
+        "COLUMN_TYPE": "varchar(20)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "DrugControlNumber",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "NopayIns1",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "PointerICD10",
+        "COLUMN_TYPE": "smallint(6)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "DXPointer10",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "MIR.ORDER",
+        "COLUMN_TYPE": "set('Customer.Inactive','Customer.MIR','Policy1.Required','Policy1.MIR','Policy2.Required','Policy2.MIR','Facility.MIR','PosType.Required','ICD9.Required','ICD9.1.Unknown','ICD9.1.Inactive','ICD9.2.Unknown','ICD9.2.Inactive','ICD9.3.Unknown','ICD9.3.Inactive','ICD9.4.Unknown','ICD9.4.Inactive','ICD10.Required','ICD10.01.Unknown','ICD10.01.Inactive','ICD10.02.Unknown','ICD10.02.Inactive','ICD10.03.Unknown','ICD10.03.Inactive','ICD10.04.Unknown','ICD10.04.Inactive','ICD10.05.Unknown','ICD10.05.Inactive','ICD10.06.Unknown','ICD10.06.Inactive','ICD10.07.Unknown','ICD10.07.Inactive','ICD10.08.Unknown','ICD10.08.Inactive','ICD10.09.Unknown','ICD10.09.Inactive','ICD10.10.Unknown','ICD10.10.Inactive','ICD10.11.Unknown','ICD10.11.Inactive','ICD10.12.Unknown','ICD10.12.Inactive')",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "HaoDescription",
+        "COLUMN_TYPE": "varchar(100)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "UserField1",
+        "COLUMN_TYPE": "varchar(100)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "UserField2",
+        "COLUMN_TYPE": "varchar(100)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "AuthorizationExpirationDate",
+        "COLUMN_TYPE": "date",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "IsActive",
+        "COLUMN_TYPE": "int(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "IsCanceled",
+        "COLUMN_TYPE": "int(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "IsSold",
+        "COLUMN_TYPE": "int(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "IsRented",
+        "COLUMN_TYPE": "int(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "ActualSaleRentType",
+        "COLUMN_TYPE": "varchar(22)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "ActualBillItemOn",
+        "COLUMN_TYPE": "varchar(22)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "ActualOrderedWhen",
+        "COLUMN_TYPE": "varchar(13)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "ActualBilledWhen",
+        "COLUMN_TYPE": "varchar(16)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "ActualDosTo",
+        "COLUMN_TYPE": "datetime",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "InvoiceDate",
+        "COLUMN_TYPE": "datetime",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "IsOxygen",
+        "COLUMN_TYPE": "int(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "IsZeroAmount",
+        "COLUMN_TYPE": "int(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "IsPickedup",
+        "COLUMN_TYPE": "int(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      }
+    ],
+    "indexes": [],
+    "foreign_keys": []
+  },
+  "view_orderdetails_core": {
+    "create_statement": {
+      "View": "view_orderdetails_core",
+      "Create View": "CREATE ALGORITHM=MERGE DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_orderdetails_core` AS select `det`.`ID` AS `ID`,`det`.`OrderID` AS `OrderID`,`det`.`CustomerID` AS `CustomerID`,`det`.`SerialNumber` AS `SerialNumber`,`det`.`InventoryItemID` AS `InventoryItemID`,`det`.`PriceCodeID` AS `PriceCodeID`,`det`.`SaleRentType` AS `SaleRentType`,`det`.`SerialID` AS `SerialID`,`det`.`BillablePrice` AS `BillablePrice`,`det`.`AllowablePrice` AS `AllowablePrice`,`det`.`Taxable` AS `Taxable`,`det`.`FlatRate` AS `FlatRate`,`det`.`DOSFrom` AS `DOSFrom`,`det`.`DOSTo` AS `DOSTo`,`det`.`PickupDate` AS `PickupDate`,`det`.`ShowSpanDates` AS `ShowSpanDates`,`det`.`OrderedQuantity` AS `OrderedQuantity`,`det`.`OrderedUnits` AS `OrderedUnits`,`det`.`OrderedWhen` AS `OrderedWhen`,`det`.`OrderedConverter` AS `OrderedConverter`,`det`.`BilledQuantity` AS `BilledQuantity`,`det`.`BilledUnits` AS `BilledUnits`,`det`.`BilledWhen` AS `BilledWhen`,`det`.`BilledConverter` AS `BilledConverter`,`det`.`DeliveryQuantity` AS `DeliveryQuantity`,`det`.`DeliveryUnits` AS `DeliveryUnits`,`det`.`DeliveryConverter` AS `DeliveryConverter`,`det`.`BillingCode` AS `BillingCode`,`det`.`Modifier1` AS `Modifier1`,`det`.`Modifier2` AS `Modifier2`,`det`.`Modifier3` AS `Modifier3`,`det`.`Modifier4` AS `Modifier4`,`det`.`DXPointer` AS `DXPointer`,`det`.`BillingMonth` AS `BillingMonth`,`det`.`BillItemOn` AS `BillItemOn`,`det`.`AuthorizationNumber` AS `AuthorizationNumber`,`det`.`AuthorizationTypeID` AS `AuthorizationTypeID`,`det`.`ReasonForPickup` AS `ReasonForPickup`,`det`.`SendCMN_RX_w_invoice` AS `SendCMN_RX_w_invoice`,`det`.`MedicallyUnnecessary` AS `MedicallyUnnecessary`,`det`.`Sale` AS `Sale`,`det`.`SpecialCode` AS `SpecialCode`,`det`.`ReviewCode` AS `ReviewCode`,`det`.`NextOrderID` AS `NextOrderID`,`det`.`ReoccuringID` AS `ReoccuringID`,`det`.`CMNFormID` AS `CMNFormID`,`det`.`HAOCode` AS `HAOCode`,`det`.`State` AS `State`,`det`.`BillIns1` AS `BillIns1`,`det`.`BillIns2` AS `BillIns2`,`det`.`BillIns3` AS `BillIns3`,`det`.`BillIns4` AS `BillIns4`,`det`.`EndDate` AS `EndDate`,`det`.`MIR` AS `MIR`,`det`.`NextBillingDate` AS `NextBillingDate`,`det`.`WarehouseID` AS `WarehouseID`,`det`.`AcceptAssignment` AS `AcceptAssignment`,`det`.`DrugNoteField` AS `DrugNoteField`,`det`.`DrugControlNumber` AS `DrugControlNumber`,`det`.`NopayIns1` AS `NopayIns1`,`det`.`PointerICD10` AS `PointerICD10`,`det`.`DXPointer10` AS `DXPointer10`,`det`.`MIR.ORDER` AS `MIR.ORDER`,`det`.`HaoDescription` AS `HaoDescription`,`det`.`UserField1` AS `UserField1`,`det`.`UserField2` AS `UserField2`,`det`.`AuthorizationExpirationDate` AS `AuthorizationExpirationDate`,(case when (`det`.`State` in ('Closed','Canceled')) then 0 else 1 end) AS `IsActive`,(case when (`det`.`State` = 'Canceled') then 1 else 0 end) AS `IsCanceled`,(case when (`det`.`SaleRentType` in ('One Time Sale','Re-occurring Sale')) then 1 else 0 end) AS `IsSold`,(case when (`det`.`SaleRentType` in ('Capped Rental','Medicare Oxygen Rental','Parental Capped Rental','Rent to Purchase','Monthly Rental','One Time Rental')) then 1 else 0 end) AS `IsRented`,ifnull(`det`.`SaleRentType`,'') AS `ActualSaleRentType`,(case when (`det`.`BillItemOn` not in ('Day of Delivery','Last day of the Period')) then '' when ((`det`.`SaleRentType` = 'One Time Rental') and (`det`.`BillItemOn` <> 'Last day of the Period')) then '' else ifnull(`det`.`BillItemOn`,'') end) AS `ActualBillItemOn`,(case when ((`det`.`SaleRentType` = 'Capped Rental') and (`det`.`OrderedWhen` in ('One time','Monthly'))) then `det`.`OrderedWhen` when ((`det`.`SaleRentType` = 'Medicare Oxygen Rental') and (`det`.`OrderedWhen` in ('One time','Monthly'))) then `det`.`OrderedWhen` when ((`det`.`SaleRentType` = 'Parental Capped Rental') and (`det`.`OrderedWhen` in ('One time','Monthly'))) then `det`.`OrderedWhen` when ((`det`.`SaleRentType` = 'Rent to Purchase') and (`det`.`OrderedWhen` in ('One time','Monthly'))) then `det`.`OrderedWhen` when ((`det`.`SaleRentType` = 'One Time Sale') and (`det`.`OrderedWhen` not in ('One time','Daily','Weekly','Monthly','Quarterly','Semi-Annually','Annually'))) then '' when ((`det`.`SaleRentType` = 'Re-occurring Sale') and (`det`.`OrderedWhen` not in ('One time','Daily','Weekly','Monthly','Quarterly','Semi-Annually','Annually'))) then '' when ((`det`.`SaleRentType` = 'Monthly Rental') and (`det`.`OrderedWhen` not in ('One time','Daily','Weekly','Monthly','Quarterly','Semi-Annually','Annually'))) then '' when ((`det`.`SaleRentType` = 'One Time Rental') and (`det`.`OrderedWhen` in ('One time','Daily','Weekly','Monthly','Quarterly','Semi-Annually','Annually'))) then `det`.`OrderedWhen` when ((`det`.`BilledWhen` = 'One time') and (`det`.`OrderedWhen` <> 'One time')) then '' when ((`det`.`BilledWhen` = 'Daily') and (`det`.`OrderedWhen` not in ('One time','Daily'))) then '' when ((`det`.`BilledWhen` = 'Weekly') and (`det`.`OrderedWhen` not in ('One time','Daily','Weekly'))) then '' when ((`det`.`BilledWhen` = 'Monthly') and (`det`.`OrderedWhen` not in ('One time','Daily','Weekly','Monthly'))) then '' when ((`det`.`BilledWhen` = 'Calendar Monthly') and (`det`.`OrderedWhen` not in ('One time','Daily','Weekly','Monthly'))) then '' when ((`det`.`BilledWhen` = 'Quarterly') and (`det`.`OrderedWhen` not in ('One time','Daily','Weekly','Monthly','Quarterly'))) then '' when ((`det`.`BilledWhen` = 'Semi-Annually') and (`det`.`OrderedWhen` not in ('One time','Daily','Weekly','Monthly','Quarterly','Semi-Annually'))) then '' when ((`det`.`BilledWhen` = 'Annually') and (`det`.`OrderedWhen` not in ('One time','Daily','Weekly','Monthly','Quarterly','Semi-Annually','Annually'))) then '' when ((`det`.`BilledWhen` = 'Custom') and (`det`.`OrderedWhen` not in ('One time','Daily'))) then '' else ifnull(`det`.`OrderedWhen`,'') end) AS `ActualOrderedWhen`,(case when ((`det`.`SaleRentType` = 'Capped Rental') and (`det`.`BilledWhen` <> 'Monthly')) then '' when ((`det`.`SaleRentType` = 'Medicare Oxygen Rental') and (`det`.`BilledWhen` <> 'Monthly')) then '' when ((`det`.`SaleRentType` = 'Parental Capped Rental') and (`det`.`BilledWhen` <> 'Monthly')) then '' when ((`det`.`SaleRentType` = 'Rent to Purchase') and (`det`.`BilledWhen` <> 'Monthly')) then '' when ((`det`.`SaleRentType` = 'One Time Sale') and (`det`.`BilledWhen` not in ('One time','Daily','Weekly','Monthly','Calendar Monthly','Quarterly','Semi-Annually','Annually','Custom'))) then '' when ((`det`.`SaleRentType` = 'Re-occurring Sale') and (`det`.`BilledWhen` not in ('Daily','Weekly','Monthly','Calendar Monthly','Quarterly','Semi-Annually','Annually','Custom'))) then '' when ((`det`.`SaleRentType` = 'Monthly Rental') and (`det`.`BilledWhen` not in ('Daily','Weekly','Monthly','Calendar Monthly','Quarterly','Semi-Annually','Annually','Custom'))) then '' when ((`det`.`SaleRentType` = 'One Time Rental') and (`det`.`BilledWhen` <> 'One time')) then '' else ifnull(`det`.`BilledWhen`,'') end) AS `ActualBilledWhen`,(case when (`det`.`SaleRentType` = 'Capped Rental') then `GetPeriodEnd`(`det`.`DOSFrom`,`det`.`DOSTo`,'Monthly') when (`det`.`SaleRentType` = 'Medicare Oxygen Rental') then `GetPeriodEnd`(`det`.`DOSFrom`,`det`.`DOSTo`,'Monthly') when (`det`.`SaleRentType` = 'Parental Capped Rental') then `GetPeriodEnd`(`det`.`DOSFrom`,`det`.`DOSTo`,'Monthly') when (`det`.`SaleRentType` = 'Rent to Purchase') then `GetPeriodEnd`(`det`.`DOSFrom`,`det`.`DOSTo`,'Monthly') when (`det`.`SaleRentType` = 'One Time Sale') then `GetPeriodEnd`(`det`.`DOSFrom`,`det`.`DOSTo`,`det`.`BilledWhen`) when (`det`.`SaleRentType` = 'Re-occurring Sale') then `GetPeriodEnd`(`det`.`DOSFrom`,`det`.`DOSTo`,`det`.`BilledWhen`) when (`det`.`SaleRentType` = 'Monthly Rental') then `GetPeriodEnd2`(`det`.`DOSFrom`,`det`.`DOSTo`,`det`.`EndDate`,`det`.`BilledWhen`) when (`det`.`SaleRentType` = 'One Time Rental') then `det`.`EndDate` else `det`.`DOSFrom` end) AS `ActualDosTo`,(case when ((`det`.`SaleRentType` = 'Capped Rental') and (`det`.`BillItemOn` = 'Last day of the Period')) then `GetPeriodEnd`(`det`.`DOSFrom`,`det`.`DOSTo`,'Monthly') when ((`det`.`SaleRentType` = 'Medicare Oxygen Rental') and (`det`.`BillItemOn` = 'Last day of the Period')) then `GetPeriodEnd`(`det`.`DOSFrom`,`det`.`DOSTo`,'Monthly') when ((`det`.`SaleRentType` = 'Parental Capped Rental') and (`det`.`BillItemOn` = 'Last day of the Period')) then `GetPeriodEnd`(`det`.`DOSFrom`,`det`.`DOSTo`,'Monthly') when ((`det`.`SaleRentType` = 'Rent to Purchase') and (`det`.`BillItemOn` = 'Last day of the Period')) then `GetPeriodEnd`(`det`.`DOSFrom`,`det`.`DOSTo`,'Monthly') when ((`det`.`SaleRentType` = 'One Time Sale') and (`det`.`BillItemOn` = 'Last day of the Period')) then `GetPeriodEnd`(`det`.`DOSFrom`,`det`.`DOSTo`,`det`.`BilledWhen`) when ((`det`.`SaleRentType` = 'Re-occurring Sale') and (`det`.`BillItemOn` = 'Last day of the Period')) then `GetPeriodEnd`(`det`.`DOSFrom`,`det`.`DOSTo`,`det`.`BilledWhen`) when ((`det`.`SaleRentType` = 'Monthly Rental') and (`det`.`BillItemOn` = 'Last day of the Period')) then `GetPeriodEnd`(`det`.`DOSFrom`,`det`.`DOSTo`,`det`.`BilledWhen`) when ((`det`.`SaleRentType` = 'One Time Rental') and (`det`.`BillItemOn` = 'Last day of the Period')) then `det`.`EndDate` else `det`.`DOSFrom` end) AS `InvoiceDate`,(case when (`det`.`BillingCode` in ('A4606','A4608','A4616','E0424','E0430','E0431','E0434','E0435','E0439')) then 1 when (`det`.`BillingCode` in ('E0440','E0441','E0442','E0443','E0444','E0445','E0455','E1390','E1391')) then 1 when (`det`.`BillingCode` = 'E1392') then 1 else 0 end) AS `IsOxygen`,if(((abs(ifnull(`det`.`BillablePrice`,0)) <= 1e-5) and (abs(ifnull(`det`.`AllowablePrice`,0)) <= 1e-5)),1,0) AS `IsZeroAmount` from `tbl_orderdetails` `det`",
+      "character_set_client": "latin1",
+      "collation_connection": "latin1_swedish_ci"
+    },
+    "columns": [
+      {
+        "COLUMN_NAME": "ID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "OrderID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "CustomerID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "SerialNumber",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "InventoryItemID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "PriceCodeID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "SaleRentType",
+        "COLUMN_TYPE": "enum('Medicare Oxygen Rental','One Time Rental','Monthly Rental','Capped Rental','Parental Capped Rental','Rent to Purchase','One Time Sale','Re-occurring Sale')",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "Monthly Rental",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "SerialID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "BillablePrice",
+        "COLUMN_TYPE": "decimal(18,2)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0.00",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "AllowablePrice",
+        "COLUMN_TYPE": "decimal(18,2)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0.00",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "Taxable",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "FlatRate",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "DOSFrom",
+        "COLUMN_TYPE": "date",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0000-00-00",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "DOSTo",
+        "COLUMN_TYPE": "date",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "PickupDate",
+        "COLUMN_TYPE": "date",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "ShowSpanDates",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "OrderedQuantity",
+        "COLUMN_TYPE": "double",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "OrderedUnits",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "OrderedWhen",
+        "COLUMN_TYPE": "enum('One time','Daily','Weekly','Monthly','Quarterly','Semi-Annually','Annually')",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "One time",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "OrderedConverter",
+        "COLUMN_TYPE": "double",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "1",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "BilledQuantity",
+        "COLUMN_TYPE": "double",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "BilledUnits",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "BilledWhen",
+        "COLUMN_TYPE": "enum('One time','Daily','Weekly','Monthly','Calendar Monthly','Quarterly','Semi-Annually','Annually','Custom')",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "One time",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "BilledConverter",
+        "COLUMN_TYPE": "double",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "1",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "DeliveryQuantity",
+        "COLUMN_TYPE": "double",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "DeliveryUnits",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "DeliveryConverter",
+        "COLUMN_TYPE": "double",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "1",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "BillingCode",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "Modifier1",
+        "COLUMN_TYPE": "varchar(8)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "Modifier2",
+        "COLUMN_TYPE": "varchar(8)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "Modifier3",
+        "COLUMN_TYPE": "varchar(8)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "Modifier4",
+        "COLUMN_TYPE": "varchar(8)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "DXPointer",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "BillingMonth",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "1",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "BillItemOn",
+        "COLUMN_TYPE": "enum('Day of Delivery','Last day of the Month','Last day of the Period','Day of Pick-up')",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "Day of Delivery",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "AuthorizationNumber",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "AuthorizationTypeID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "ReasonForPickup",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "SendCMN_RX_w_invoice",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "MedicallyUnnecessary",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "Sale",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "SpecialCode",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "ReviewCode",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "NextOrderID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "ReoccuringID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "CMNFormID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "HAOCode",
+        "COLUMN_TYPE": "varchar(10)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "State",
+        "COLUMN_TYPE": "enum('New','Approved','Pickup','Closed','Canceled')",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "New",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "BillIns1",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "1",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "BillIns2",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "1",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "BillIns3",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "1",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "BillIns4",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "1",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "EndDate",
+        "COLUMN_TYPE": "date",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "MIR",
+        "COLUMN_TYPE": "set('InventoryItemID','PriceCodeID','SaleRentType','OrderedQuantity','OrderedUnits','OrderedWhen','OrderedConverter','BilledQuantity','BilledUnits','BilledWhen','BilledConverter','DeliveryQuantity','DeliveryUnits','DeliveryConverter','BillingCode','BillItemOn','DXPointer9','DXPointer10','Modifier1','Modifier2','Modifier3','CMNForm.Required','CMNForm.RecertificationDate','CMNForm.FormExpired','CMNForm.MIR','EndDate.Invalid','EndDate.Unconfirmed','AuthorizationNumber.Expired','AuthorizationNumber.Expires')",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "NextBillingDate",
+        "COLUMN_TYPE": "date",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "WarehouseID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "AcceptAssignment",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "DrugNoteField",
+        "COLUMN_TYPE": "varchar(20)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "DrugControlNumber",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "NopayIns1",
+        "COLUMN_TYPE": "tinyint(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "PointerICD10",
+        "COLUMN_TYPE": "smallint(6)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "DXPointer10",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "MIR.ORDER",
+        "COLUMN_TYPE": "set('Customer.Inactive','Customer.MIR','Policy1.Required','Policy1.MIR','Policy2.Required','Policy2.MIR','Facility.MIR','PosType.Required','ICD9.Required','ICD9.1.Unknown','ICD9.1.Inactive','ICD9.2.Unknown','ICD9.2.Inactive','ICD9.3.Unknown','ICD9.3.Inactive','ICD9.4.Unknown','ICD9.4.Inactive','ICD10.Required','ICD10.01.Unknown','ICD10.01.Inactive','ICD10.02.Unknown','ICD10.02.Inactive','ICD10.03.Unknown','ICD10.03.Inactive','ICD10.04.Unknown','ICD10.04.Inactive','ICD10.05.Unknown','ICD10.05.Inactive','ICD10.06.Unknown','ICD10.06.Inactive','ICD10.07.Unknown','ICD10.07.Inactive','ICD10.08.Unknown','ICD10.08.Inactive','ICD10.09.Unknown','ICD10.09.Inactive','ICD10.10.Unknown','ICD10.10.Inactive','ICD10.11.Unknown','ICD10.11.Inactive','ICD10.12.Unknown','ICD10.12.Inactive')",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "HaoDescription",
+        "COLUMN_TYPE": "varchar(100)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "UserField1",
+        "COLUMN_TYPE": "varchar(100)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "UserField2",
+        "COLUMN_TYPE": "varchar(100)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "AuthorizationExpirationDate",
+        "COLUMN_TYPE": "date",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "IsActive",
+        "COLUMN_TYPE": "int(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "IsCanceled",
+        "COLUMN_TYPE": "int(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "IsSold",
+        "COLUMN_TYPE": "int(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "IsRented",
+        "COLUMN_TYPE": "int(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "ActualSaleRentType",
+        "COLUMN_TYPE": "varchar(22)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "ActualBillItemOn",
+        "COLUMN_TYPE": "varchar(22)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "ActualOrderedWhen",
+        "COLUMN_TYPE": "varchar(13)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "ActualBilledWhen",
+        "COLUMN_TYPE": "varchar(16)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "ActualDosTo",
+        "COLUMN_TYPE": "datetime",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "InvoiceDate",
+        "COLUMN_TYPE": "datetime",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "IsOxygen",
+        "COLUMN_TYPE": "int(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "IsZeroAmount",
+        "COLUMN_TYPE": "int(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      }
+    ],
+    "indexes": [],
+    "foreign_keys": []
+  },
+  "view_pricecode": {
+    "create_statement": {
+      "View": "view_pricecode",
+      "Create View": "CREATE ALGORITHM=MERGE DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_pricecode` AS select sql_small_result `tbl_pricecode`.`ID` AS `ID`,`tbl_pricecode`.`Name` AS `Name`,if((`tbl_pricecode`.`Name` like '%RETAIL%'),1,0) AS `IsRetail` from `tbl_pricecode`",
+      "character_set_client": "latin1",
+      "collation_connection": "latin1_swedish_ci"
+    },
+    "columns": [
+      {
+        "COLUMN_NAME": "ID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "Name",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "IsRetail",
+        "COLUMN_TYPE": "int(1)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      }
+    ],
+    "indexes": [],
+    "foreign_keys": []
+  },
+  "view_reoccuringlist": {
+    "create_statement": {
+      "View": "view_reoccuringlist",
+      "Create View": "CREATE ALGORITHM=MERGE DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_reoccuringlist` AS select `tbl_order`.`ID` AS `OrderID`,`details`.`BilledWhen` AS `BilledWhen`,`details`.`ActualBillItemOn` AS `BillItemOn` from (`view_orderdetails` `details` join `tbl_order` on(((`details`.`CustomerID` = `tbl_order`.`CustomerID`) and (`details`.`OrderID` = `tbl_order`.`ID`)))) where ((`details`.`SaleRentType` = 'Re-occurring Sale') and if((`details`.`BillingMonth` <= 1),((`GetNextDosFrom`(`details`.`DOSFrom`,`details`.`DOSTo`,`details`.`ActualBilledWhen`) + interval -(1) month) <= now()),((`details`.`DOSFrom` + interval -(1) month) <= now())))",
+      "character_set_client": "latin1",
+      "collation_connection": "latin1_swedish_ci"
+    },
+    "columns": [
+      {
+        "COLUMN_NAME": "OrderID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "BilledWhen",
+        "COLUMN_TYPE": "enum('One time','Daily','Weekly','Monthly','Calendar Monthly','Quarterly','Semi-Annually','Annually','Custom')",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "One time",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "BillItemOn",
+        "COLUMN_TYPE": "varchar(22)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      }
+    ],
+    "indexes": [],
+    "foreign_keys": []
+  },
+  "view_sequence": {
+    "create_statement": {
+      "View": "view_sequence",
+      "Create View": "CREATE ALGORITHM=MERGE DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_sequence` AS select ((16 * `s2`.`num`) + `s1`.`num`) AS `num` from (`view_sequence_core` `s1` join `view_sequence_core` `s2`)",
+      "character_set_client": "latin1",
+      "collation_connection": "latin1_swedish_ci"
+    },
+    "columns": [
+      {
+        "COLUMN_NAME": "num",
+        "COLUMN_TYPE": "bigint(23) unsigned",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      }
+    ],
+    "indexes": [],
+    "foreign_keys": []
+  },
+  "view_sequence_core": {
+    "create_statement": {
+      "View": "view_sequence_core",
+      "Create View": "CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_sequence_core` AS select cast(0 as unsigned) AS `num` union all select cast(1 as unsigned) AS `num` union all select cast(2 as unsigned) AS `num` union all select cast(3 as unsigned) AS `num` union all select cast(4 as unsigned) AS `num` union all select cast(5 as unsigned) AS `num` union all select cast(6 as unsigned) AS `num` union all select cast(7 as unsigned) AS `num` union all select cast(8 as unsigned) AS `num` union all select cast(9 as unsigned) AS `num` union all select cast(10 as unsigned) AS `num` union all select cast(11 as unsigned) AS `num` union all select cast(12 as unsigned) AS `num` union all select cast(13 as unsigned) AS `num` union all select cast(14 as unsigned) AS `num` union all select cast(15 as unsigned) AS `num`",
+      "character_set_client": "latin1",
+      "collation_connection": "latin1_swedish_ci"
+    },
+    "columns": [
+      {
+        "COLUMN_NAME": "num",
+        "COLUMN_TYPE": "bigint(20) unsigned",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      }
+    ],
+    "indexes": [],
+    "foreign_keys": []
+  },
+  "view_taxrate": {
+    "create_statement": {
+      "View": "view_taxrate",
+      "Create View": "CREATE ALGORITHM=MERGE DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_taxrate` AS select sql_small_result `tbl_taxrate`.`ID` AS `ID`,`tbl_taxrate`.`CityTax` AS `CityTax`,`tbl_taxrate`.`CountyTax` AS `CountyTax`,`tbl_taxrate`.`Name` AS `Name`,`tbl_taxrate`.`OtherTax` AS `OtherTax`,`tbl_taxrate`.`StateTax` AS `StateTax`,`tbl_taxrate`.`LastUpdateUserID` AS `LastUpdateUserID`,`tbl_taxrate`.`LastUpdateDatetime` AS `LastUpdateDatetime`,(((ifnull(`tbl_taxrate`.`CityTax`,0) + ifnull(`tbl_taxrate`.`CountyTax`,0)) + ifnull(`tbl_taxrate`.`OtherTax`,0)) + ifnull(`tbl_taxrate`.`StateTax`,0)) AS `TotalTax` from `tbl_taxrate`",
+      "character_set_client": "latin1",
+      "collation_connection": "latin1_swedish_ci"
+    },
+    "columns": [
+      {
+        "COLUMN_NAME": "ID",
+        "COLUMN_TYPE": "int(11)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "CityTax",
+        "COLUMN_TYPE": "double",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "CountyTax",
+        "COLUMN_TYPE": "double",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "Name",
+        "COLUMN_TYPE": "varchar(50)",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": "latin1",
+        "COLLATION_NAME": "latin1_general_ci"
+      },
+      {
+        "COLUMN_NAME": "OtherTax",
+        "COLUMN_TYPE": "double",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "StateTax",
+        "COLUMN_TYPE": "double",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "LastUpdateUserID",
+        "COLUMN_TYPE": "smallint(6)",
+        "IS_NULLABLE": "YES",
+        "COLUMN_DEFAULT": null,
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "LastUpdateDatetime",
+        "COLUMN_TYPE": "timestamp",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0000-00-00 00:00:00",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      },
+      {
+        "COLUMN_NAME": "TotalTax",
+        "COLUMN_TYPE": "double",
+        "IS_NULLABLE": "NO",
+        "COLUMN_DEFAULT": "0",
+        "EXTRA": "",
+        "CHARACTER_SET_NAME": null,
+        "COLLATION_NAME": null
+      }
+    ],
+    "indexes": [],
+    "foreign_keys": []
+  }
+}

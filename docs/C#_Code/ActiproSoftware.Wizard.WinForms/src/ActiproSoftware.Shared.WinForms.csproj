@@ -1,0 +1,288 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>8c3b3246-a416-40f9-9af7-6325454ffb61</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>ActiproSoftware.Shared.WinForms</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Compile Include="Global.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\ColorListBox.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\ColorListBoxColorSet.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\ColorPalettePicker.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\UIControl.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\IUIControl.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\IUIElement.cs" />
+    <Compile Include="ActiproSoftware\ComponentModel\ILogicalTreeNode.cs" />
+    <Compile Include="#Xqe\#Wqe.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\UIElement.cs" />
+    <Compile Include="ActiproSoftware\ComponentModel\LogicalTreeNodeBase.cs" />
+    <Compile Include="ActiproSoftware\ComponentModel\DisposableObject.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\IInputElement.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\GeneralTransform.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\HitTestParameters.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\HitTestResult.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\IImageListProvider.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\ImageIndexAttribute.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\InvalidationLevels.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\InvalidationTypes.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\IScrollBarRenderer.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\IUIRenderer.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\IUIRendererFactory.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\NoActivateForm.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\OwnerDrawContextMenu.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\OwnerDrawMainMenu.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\OwnerDrawMenuItem.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\PointHitTestParameters.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\PointHitTestResult.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\PopupControl.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\ScrollBar.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Commands\ICommandTarget.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\ScrollBarButton.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\ScrollBarRenderer.cs" />
+    <Compile Include="#Xqe\#Yqe.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\ScrollBarThumb.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\StandardColorPicker.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\StandardColorPickerPopup.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\UIContainerControl.cs" />
+    <Compile Include="#Xqe\#Zqe.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\UIElementCollection.cs" />
+    <Compile Include="ActiproSoftware\ComponentModel\LogicalTreeNodeCollection.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\UIElementCollectionConverter.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\UIElementComponent.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\UIElementDrawState.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\UIRendererManager.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Visibility.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\WindowsXPScrollBarRenderer.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Rendering\FontStyles.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Rendering\FontWeights.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Rendering\ICanvas.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Rendering\CanvasControl.cs" />
+    <Compile Include="#xOk\#Gsk.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Rendering\CanvasDrawContext.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Rendering\CanvasDrawEventArgs.cs" />
+    <Compile Include="#xOk\#Tsk!1.cs" />
+    <Compile Include="#xOk\#vDd.cs" />
+    <Compile Include="#xOk\#1Ok.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Rendering\FontFamilyMapRepository.cs" />
+    <Compile Include="#xOk\#fPk.cs" />
+    <Compile Include="#xOk\#S7b.cs" />
+    <Compile Include="#xOk\#Bi.cs" />
+    <Compile Include="#xOk\#zOk.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Rendering\SpacerTextProvider.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Rendering\ITextProvider.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Rendering\StringTextProvider.cs" />
+    <Compile Include="#xOk\#4sk.cs" />
+    <Compile Include="#xOk\#xtk.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Rendering\ITextLayout.cs" />
+    <Compile Include="#xOk\#ytk.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Rendering\ITextBounds.cs" />
+    <Compile Include="#xOk\#juk.cs" />
+    <Compile Include="#xOk\#luk.cs" />
+    <Compile Include="#xOk\#muk.cs" />
+    <Compile Include="#xOk\#MSk.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Rendering\ITextLayoutLine.cs" />
+    <Compile Include="#xOk\#USk.cs" />
+    <Compile Include="#xOk\#m7k.cs" />
+    <Compile Include="#xOk\#yuk.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Rendering\ITextSpacer.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Rendering\UnicodeRange.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Rendering\LineKind.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Rendering\TextLayoutWrapping.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Rendering\TextLineWeight.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Rendering\TextProviderTranslateModes.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Input\DelegateCommand!1.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Input\ICommand.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Input\InputAdapter.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Input\InputAdapterEventKinds.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Input\InputDeviceKind.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Input\InputPointerButtonEventArgs.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Input\InputPointerEventArgs.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Input\InputPointerButtonKind.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Input\InputPointerWheelEventArgs.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Input\ModifierKeys.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Input\MouseAction.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Commands\Command.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Commands\CommandEventArgs.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Commands\CommandEventHandler.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Commands\CommandLink.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Commands\CommandLinkCollection.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Commands\KeyBinding.cs" />
+    <Compile Include="ActiproSoftware\WinUICore\Commands\MouseBinding.cs" />
+    <Compile Include="ActiproSoftware\Win32\HookBase.cs" />
+    <Compile Include="ActiproSoftware\Win32\IMouseHookCallback.cs" />
+    <Compile Include="ActiproSoftware\Win32\MouseHook.cs" />
+    <Compile Include="ActiproSoftware\Win32\MouseHookEventArgs.cs" />
+    <Compile Include="ActiproSoftware\Win32\MouseHookEventHandler.cs" />
+    <Compile Include="#aXd\#Bi.cs" />
+    <Compile Include="#aXd\#Vqe.cs" />
+    <Compile Include="ActiproSoftware\Security\Cryptography\CryptoHelper.cs" />
+    <Compile Include="ActiproSoftware\Properties\Resources.cs" />
+    <Compile Include="ActiproSoftware\Products\ActiproLicense.cs" />
+    <Compile Include="ActiproSoftware\Products\ActiproLicenseManager.cs" />
+    <Compile Include="ActiproSoftware\Products\AssemblyInfo.cs" />
+    <Compile Include="ActiproSoftware\Products\ActiproLicenseProvider.cs" />
+    <Compile Include="ActiproSoftware\Products\ActiproLicenseSourceLocation.cs" />
+    <Compile Include="ActiproSoftware\Products\ActiproLicenseToken.cs" />
+    <Compile Include="ActiproSoftware\Products\ActiproLicenseValidator.cs" />
+    <Compile Include="ActiproSoftware\Products\AlgorithmGLicenseDecryptor.cs" />
+    <Compile Include="#PAb\#OAb.cs" />
+    <Compile Include="ActiproSoftware\Products\AssemblyLicenseType.cs" />
+    <Compile Include="ActiproSoftware\Products\AssemblyPlatform.cs" />
+    <Compile Include="#PAb\#oFj.cs" />
+    <Compile Include="ActiproSoftware\Products\LicenseException.cs" />
+    <Compile Include="#PAb\#Rqe.cs" />
+    <Compile Include="ActiproSoftware\Products\ProductData.cs" />
+    <Compile Include="ActiproSoftware\Products\SRBase.cs" />
+    <Compile Include="ActiproSoftware\Products\Shared\AssemblyInfo.cs" />
+    <Compile Include="ActiproSoftware\Products\Shared\CursorResource.cs" />
+    <Compile Include="ActiproSoftware\Products\Shared\Resources.cs" />
+    <Compile Include="ActiproSoftware\Products\Shared\SR.cs" />
+    <Compile Include="ActiproSoftware\MarkupLabel\MarkupLabel.cs" />
+    <Compile Include="ActiproSoftware\MarkupLabel\MarkupLabelAnchorElement.cs" />
+    <Compile Include="ActiproSoftware\MarkupLabel\MarkupLabelElement.cs" />
+    <Compile Include="ActiproSoftware\MarkupLabel\MarkupLabelBodyElement.cs" />
+    <Compile Include="ActiproSoftware\MarkupLabel\MarkupLabelBoldElement.cs" />
+    <Compile Include="ActiproSoftware\MarkupLabel\MarkupLabelCssData.cs" />
+    <Compile Include="ActiproSoftware\MarkupLabel\MarkupLabelDownloadImageEventArgs.cs" />
+    <Compile Include="ActiproSoftware\MarkupLabel\MarkupLabelDownloadImageEventHandler.cs" />
+    <Compile Include="ActiproSoftware\MarkupLabel\MarkupLabelElementVerticalAlignment.cs" />
+    <Compile Include="ActiproSoftware\MarkupLabel\MarkupLabelEmphasisElement.cs" />
+    <Compile Include="ActiproSoftware\MarkupLabel\MarkupLabelFontStyle.cs" />
+    <Compile Include="ActiproSoftware\MarkupLabel\MarkupLabelFontWeight.cs" />
+    <Compile Include="ActiproSoftware\MarkupLabel\MarkupLabelImageElement.cs" />
+    <Compile Include="ActiproSoftware\MarkupLabel\MarkupLabelImageUIElement.cs" />
+    <Compile Include="ActiproSoftware\MarkupLabel\MarkupLabelUIElement.cs" />
+    <Compile Include="ActiproSoftware\MarkupLabel\MarkupLabelItalicElement.cs" />
+    <Compile Include="#Qqe\#Pqe.cs" />
+    <Compile Include="ActiproSoftware\MarkupLabel\MarkupLabelLineBreakElement.cs" />
+    <Compile Include="ActiproSoftware\MarkupLabel\MarkupLabelLineBreakUIElement.cs" />
+    <Compile Include="ActiproSoftware\MarkupLabel\MarkupLabelLinkClickEventArgs.cs" />
+    <Compile Include="ActiproSoftware\MarkupLabel\MarkupLabelLinkClickEventHandler.cs" />
+    <Compile Include="ActiproSoftware\MarkupLabel\MarkupLabelSpanElement.cs" />
+    <Compile Include="ActiproSoftware\MarkupLabel\MarkupLabelStrongElement.cs" />
+    <Compile Include="ActiproSoftware\MarkupLabel\MarkupLabelTextDecoration.cs" />
+    <Compile Include="ActiproSoftware\MarkupLabel\MarkupLabelTextElement.cs" />
+    <Compile Include="ActiproSoftware\MarkupLabel\MarkupLabelTextUIElement.cs" />
+    <Compile Include="ActiproSoftware\MarkupLabel\MarkupLabelUnderlineElement.cs" />
+    <Compile Include="ActiproSoftware\MarkupLabel\MarkupLabelWhitespaceUIElement.cs" />
+    <Compile Include="ActiproSoftware\Drawing\BackgroundFill.cs" />
+    <Compile Include="ActiproSoftware\Drawing\BackgroundFillRotationType.cs" />
+    <Compile Include="ActiproSoftware\Drawing\Border.cs" />
+    <Compile Include="ActiproSoftware\Drawing\Corner.cs" />
+    <Compile Include="ActiproSoftware\Drawing\DoubleBufferCanvas.cs" />
+    <Compile Include="ActiproSoftware\Drawing\IDoubleBufferCanvas.cs" />
+    <Compile Include="ActiproSoftware\Drawing\DrawingHelper.cs" />
+    <Compile Include="ActiproSoftware\Drawing\EllipseGradient.cs" />
+    <Compile Include="ActiproSoftware\Drawing\Gradient.cs" />
+    <Compile Include="#Fqe\#Eqe.cs" />
+    <Compile Include="ActiproSoftware\Drawing\HatchedBackgroundFill.cs" />
+    <Compile Include="#Fqe\#Gqe.cs" />
+    <Compile Include="ActiproSoftware\ComponentModel\ExpandableNullableObjectConverter.cs" />
+    <Compile Include="ActiproSoftware\Drawing\HorizontalAlignment.cs" />
+    <Compile Include="ActiproSoftware\Drawing\ImageBackgroundFill.cs" />
+    <Compile Include="ActiproSoftware\Drawing\ImageBackgroundFillStyle.cs" />
+    <Compile Include="ActiproSoftware\Drawing\LinearGradient.cs" />
+    <Compile Include="ActiproSoftware\Drawing\LinearGradientColorPosition.cs" />
+    <Compile Include="#Fqe\#Hqe.cs" />
+    <Compile Include="#Fqe\#Iqe.cs" />
+    <Compile Include="ActiproSoftware\Drawing\MultiColorLinearGradient.cs" />
+    <Compile Include="ActiproSoftware\Drawing\Padding.cs" />
+    <Compile Include="#Fqe\#Jqe.cs" />
+    <Compile Include="ActiproSoftware\Drawing\Range.cs" />
+    <Compile Include="#Fqe\#Kqe.cs" />
+    <Compile Include="ActiproSoftware\Drawing\Sides.cs" />
+    <Compile Include="ActiproSoftware\Drawing\SimpleBorder.cs" />
+    <Compile Include="#Fqe\#Lqe.cs" />
+    <Compile Include="ActiproSoftware\Drawing\SimpleBorderStyle.cs" />
+    <Compile Include="ActiproSoftware\Drawing\SolidColorBackgroundFill.cs" />
+    <Compile Include="#Fqe\#Mqe.cs" />
+    <Compile Include="ActiproSoftware\Drawing\TwoColorLinearGradient.cs" />
+    <Compile Include="#Fqe\#Nqe.cs" />
+    <Compile Include="ActiproSoftware\Drawing\TwoColorLinearGradientStyle.cs" />
+    <Compile Include="ActiproSoftware\Drawing\UIColor.cs" />
+    <Compile Include="ActiproSoftware\Drawing\VerticalAlignment.cs" />
+    <Compile Include="ActiproSoftware\Drawing\WindowsColorScheme.cs" />
+    <Compile Include="ActiproSoftware\Drawing\WindowsColorSchemeType.cs" />
+    <Compile Include="ActiproSoftware\ComponentModel\DefaultableBoolean.cs" />
+    <Compile Include="ActiproSoftware\ComponentModel\DefaultableInt32.cs" />
+    <Compile Include="#Dqe\#Cqe.cs" />
+    <Compile Include="ActiproSoftware\ComponentModel\ExceptionBase.cs" />
+    <Compile Include="ActiproSoftware\ComponentModel\FallbackControlDesignerProvider.cs" />
+    <Compile Include="ActiproSoftware\ComponentModel\FallbackParentControlDesignerProvider.cs" />
+    <Compile Include="ActiproSoftware\ComponentModel\GenericExpandableNullableObjectConverter.cs" />
+    <Compile Include="ActiproSoftware\ComponentModel\IKeyedLogicalTreeNode.cs" />
+    <Compile Include="ActiproSoftware\ComponentModel\IWeakEventListener.cs" />
+    <Compile Include="ActiproSoftware\ComponentModel\KeyedLogicalTreeNodeCollection.cs" />
+    <Compile Include="ActiproSoftware\ComponentModel\LogicalTreeNodeCollectionEventArgs.cs" />
+    <Compile Include="ActiproSoftware\ComponentModel\LogicalTreeNodeCollectionEventHandler.cs" />
+    <Compile Include="ActiproSoftware\ComponentModel\ObservableObjectBase.cs" />
+    <Compile Include="ActiproSoftware\ComponentModel\PropertyChangedEventArgs!1.cs" />
+    <Compile Include="#H\#G.cs" />
+    <Compile Include="#H\#x9e.cs" />
+    <Compile Include="#H\#y9e.cs" />
+    <Compile Include="#c\#z9e.cs" />
+    <Compile Include="#c\#e.cs" />
+    <Compile Include="SmartAssembly\Attributes\PoweredByAttribute.cs" />
+    <EmbeddedResource Include="#PAb.#Rqe.resources" />
+    <EmbeddedResource Include="ActiproSoftware.Products.Shared.Resources.resources" />
+    <EmbeddedResource Include="ActiproSoftware.Properties.Resources.resources" />
+    <EmbeddedResource Include="ActiproSoftware.WinUICore.ColorListBox.resources" />
+    <EmbeddedResource Include="ActiproSoftware.WinUICore.IScrollBarRenderer.resources" />
+    <EmbeddedResource Include="ActiproSoftware.WinUICore.NoActivateForm.resources" />
+    <EmbeddedResource Include="ActiproSoftware.WinUICore.ScrollBarRenderer.resources" />
+    <EmbeddedResource Include="ActiproSoftware.WinUICore.StandardColorPicker.resources" />
+    <EmbeddedResource Include="ActiproSoftware.WinUICore.StandardColorPickerPopup.resources" />
+    <EmbeddedResource Include="ActiproSoftware.WinUICore.UIContainerControl.resources" />
+    <EmbeddedResource Include="ActiproSoftware.WinUICore.UIControl.resources" />
+    <EmbeddedResource Include="ActiproSoftware.WinUICore.WindowsXPScrollBarRenderer.resources" />
+    <EmbeddedResource Include="ActiproSoftware.Products.Shared.Cursors.BarItemDragCopy.cur" />
+    <EmbeddedResource Include="ActiproSoftware.Products.Shared.Cursors.BarItemDragDelete.cur" />
+    <EmbeddedResource Include="ActiproSoftware.Products.Shared.Cursors.BarItemDragMove.cur" />
+    <EmbeddedResource Include="ActiproSoftware.Products.Shared.Cursors.DocumentDragMove.cur" />
+    <EmbeddedResource Include="ActiproSoftware.Products.Shared.Cursors.DocumentDragNone.cur" />
+    <EmbeddedResource Include="ActiproSoftware.Products.Shared.Cursors.DragCopy.cur" />
+    <EmbeddedResource Include="ActiproSoftware.Products.Shared.Cursors.DragMove.cur" />
+    <EmbeddedResource Include="ActiproSoftware.Products.Shared.Cursors.ReverseArrow.cur" />
+    <EmbeddedResource Include="ActiproSoftware.MarkupLabel.MarkupLabel.bmp" />
+    <EmbeddedResource Include="ActiproSoftware.WinUICore.ColorListBox.bmp" />
+    <EmbeddedResource Include="ActiproSoftware.WinUICore.ColorPalettePicker.bmp" />
+    <EmbeddedResource Include="ActiproSoftware.WinUICore.OwnerDrawContextMenu.bmp" />
+    <EmbeddedResource Include="ActiproSoftware.WinUICore.OwnerDrawMainMenu.bmp" />
+    <EmbeddedResource Include="ActiproSoftware.WinUICore.ScrollBar.bmp" />
+    <EmbeddedResource Include="ActiproSoftware.WinUICore.ScrollBarRenderer.bmp" />
+    <EmbeddedResource Include="ActiproSoftware.WinUICore.StandardColorPicker.bmp" />
+    <EmbeddedResource Include="ActiproSoftware.WinUICore.UIRendererManager.bmp" />
+    <EmbeddedResource Include="{c6ca1384-d373-40bf-8ba5-700cdffaec8d}" />
+  </ItemGroup>
+</Project>

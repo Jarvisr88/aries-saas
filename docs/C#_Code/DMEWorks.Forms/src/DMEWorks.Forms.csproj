@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>6ad0f735-a9b3-4dba-b4c4-c271e8aabf19</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>DMEWorks.Forms</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Compile Include="Global.cs" />
+    <Compile Include="DMEWorks\Printing\ImagePrintDocument.cs" />
+    <Compile Include="DMEWorks\Printing\TextPrintDocument.cs" />
+    <Compile Include="DMEWorks\Core\BaseTraceListener.cs" />
+    <Compile Include="DMEWorks\Core\Counters.cs" />
+    <Compile Include="DMEWorks\Core\EventTableBase.cs" />
+    <Compile Include="DMEWorks\Core\HttpUtility.cs" />
+    <Compile Include="DMEWorks\Core\LoggingProcessor.cs" />
+    <Compile Include="DMEWorks\Core\NullableConvert.cs" />
+    <Compile Include="DMEWorks\Core\SqlString.cs" />
+    <Compile Include="DMEWorks\Core\SqlStringComparer.cs" />
+    <Compile Include="DMEWorks\Core\TableBase.cs" />
+    <Compile Include="DMEWorks\Core\TextWriterTraceListener.cs" />
+    <Compile Include="DMEWorks\Core\TraceHelper.cs" />
+    <Compile Include="DMEWorks\Core\Extensions\IDataRecordExtensions.cs" />
+    <Compile Include="DMEWorks\Core\Extensions\IDataReaderExtensions.cs" />
+    <Compile Include="DMEWorks\Core\Extensions\DataRecordWrapperBase.cs" />
+    <Compile Include="DMEWorks\Core\Extensions\IDbCommandExtensions.cs" />
+    <Compile Include="DMEWorks\Core\Extensions\DataRowExtensions.cs" />
+    <Compile Include="DMEWorks\Expressions\ColumnExpression.cs" />
+    <Compile Include="DMEWorks\Expressions\ColumnExpressionVisitor.cs" />
+    <Compile Include="DMEWorks\Expressions\DmeworksExpressionVisitor.cs" />
+    <Compile Include="DMEWorks\Expressions\LambdaExpressionVisitor!1.cs" />
+    <Compile Include="DMEWorks\Expressions\PrimitiveComparisonExpression.cs" />
+    <Compile Include="DMEWorks\Expressions\PrimitiveExpression.cs" />
+    <Compile Include="DMEWorks\Expressions\PrimitiveType.cs" />
+    <Compile Include="DMEWorks\Expressions\SubstituteExpressionVisitor.cs" />
+    <Compile Include="DMEWorks\Expressions\Utilities.cs" />
+    <Compile Include="DMEWorks\Forms\ArrayViewBase!1.cs" />
+    <Compile Include="DMEWorks\Forms\CacheBase.cs" />
+    <Compile Include="DMEWorks\Forms\DmeUserControl.cs" />
+    <Compile Include="DMEWorks\Forms\Expander.cs" />
+    <Compile Include="DMEWorks\Forms\FindDialog.cs" />
+    <Compile Include="DMEWorks\Forms\Combobox.cs" />
+    <Compile Include="DMEWorks\Forms\ComboboxDrawItemEventArgs.cs" />
+    <Compile Include="DMEWorks\Forms\ComboboxDrawItemEventHandler.cs" />
+    <Compile Include="DMEWorks\Forms\InitDialogEventArgs.cs" />
+    <Compile Include="DMEWorks\Forms\InitDialogEventHandler.cs" />
+    <Compile Include="DMEWorks\Forms\DataGridViewEx.cs" />
+    <Compile Include="DMEWorks\Forms\DmeForm.cs" />
+    <Compile Include="DMEWorks\Forms\DmeMdiParentForm.cs" />
+    <Compile Include="DMEWorks\Forms\FormChooseColumns.cs" />
+    <Compile Include="DMEWorks\Forms\IGridSource.cs" />
+    <Compile Include="DMEWorks\Forms\DataTableGridSource.cs" />
+    <Compile Include="DMEWorks\Forms\ArrayGridSource!1.cs" />
+    <Compile Include="DMEWorks\Forms\GridHelpers.cs" />
+    <Compile Include="DMEWorks\Forms\FormSelector.cs" />
+    <Compile Include="DMEWorks\Forms\IDataStorage.cs" />
+    <Compile Include="DMEWorks\Forms\IEntityField.cs" />
+    <Compile Include="DMEWorks\Forms\IEntityFields.cs" />
+    <Compile Include="DMEWorks\Forms\EntityException.cs" />
+    <Compile Include="DMEWorks\Forms\IVersionStorage.cs" />
+    <Compile Include="DMEWorks\Forms\VersionStorage!1.cs" />
+    <Compile Include="DMEWorks\Forms\DataStorage!1.cs" />
+    <Compile Include="DMEWorks\Forms\EntityField.cs" />
+    <Compile Include="DMEWorks\Forms\EntityFields.cs" />
+    <Compile Include="DMEWorks\Forms\IEntity.cs" />
+    <Compile Include="DMEWorks\Forms\EntityBase.cs" />
+    <Compile Include="DMEWorks\Forms\IAdapter.cs" />
+    <Compile Include="DMEWorks\Forms\NullAdapter.cs" />
+    <Compile Include="DMEWorks\Forms\DropDownSupport.cs" />
+    <Compile Include="DMEWorks\Forms\GridAppearanceBase.cs" />
+    <Compile Include="DMEWorks\Forms\FilteredGridAppearance.cs" />
+    <Compile Include="DMEWorks\Forms\SearchableGridAppearance.cs" />
+    <Compile Include="DMEWorks\Forms\LinqPropertyDescriptor!1.cs" />
+    <Compile Include="DMEWorks\Forms\LinqPropertyDescriptor!2.cs" />
+    <Compile Include="DMEWorks\Forms\NumericBox.cs" />
+    <Compile Include="DMEWorks\Forms\DialogBackgroundWorker.cs" />
+    <Compile Include="DMEWorks\Forms\RadioGroup.cs" />
+    <Compile Include="DMEWorks\Forms\SearchableGrid.cs" />
+    <Compile Include="DMEWorks\Forms\GridMouseEventArgs.cs" />
+    <Compile Include="DMEWorks\Forms\GridContextMenuNeededEventArgs.cs" />
+    <Compile Include="DMEWorks\Forms\GridCellCancelEventArgs.cs" />
+    <Compile Include="DMEWorks\Forms\GridCellEventArgs.cs" />
+    <Compile Include="DMEWorks\Forms\GridCellFormattingEventArgs.cs" />
+    <Compile Include="DMEWorks\Forms\GridCellParsingEventArgs.cs" />
+    <Compile Include="DMEWorks\Forms\GridCellToolTipTextNeededEventArgs.cs" />
+    <Compile Include="DMEWorks\Forms\GridDataErrorEventArgs.cs" />
+    <Compile Include="DMEWorks\Forms\FilteredGrid.cs" />
+    <Compile Include="DMEWorks\Forms\GridBase.cs" />
+    <Compile Include="DMEWorks\Forms\ExtendedDropdown.cs" />
+    <Compile Include="DMEWorks\Forms\UserNotifyException.cs" />
+    <Compile Include="DMEWorks\Forms\Utilities.cs" />
+    <Compile Include="DMEWorks\Forms\Properties\Resources.cs" />
+    <Compile Include="DMEWorks\Forms\Security\FormPermissionAttribute.cs" />
+    <Compile Include="DMEWorks\Forms\Printing\FormPrintPreview.cs" />
+    <Compile Include="DMEWorks\Forms\Printing\ImageSetupDialog.cs" />
+    <Compile Include="DMEWorks\Forms\Native\SLR_FLAGS.cs" />
+    <Compile Include="DMEWorks\Forms\Native\SLGP_FLAGS.cs" />
+    <Compile Include="DMEWorks\Forms\Native\WIN32_FIND_DATAA.cs" />
+    <Compile Include="DMEWorks\Forms\Native\WIN32_FIND_DATAW.cs" />
+    <Compile Include="DMEWorks\Forms\Native\IPersistFile.cs" />
+    <Compile Include="DMEWorks\Forms\Native\IShellLinkA.cs" />
+    <Compile Include="DMEWorks\Forms\Native\IShellLinkW.cs" />
+    <Compile Include="DMEWorks\Forms\Native\ShellLink.cs" />
+    <Compile Include="DMEWorks\Forms\Native\Native.cs" />
+    <Compile Include="DMEWorks\Forms\Native\MsiShortcutParser.cs" />
+    <Compile Include="DMEWorks\Forms\Native\ShellShortcut.cs" />
+    <Compile Include="DMEWorks\Forms\Maps\Address.cs" />
+    <Compile Include="DMEWorks\Forms\Maps\MapProvider.cs" />
+    <Compile Include="DMEWorks\Forms\Maps\MapProviderMenuItem.cs" />
+    <EmbeddedResource Include="DMEWorks.Forms.Expander.resources" />
+    <EmbeddedResource Include="DMEWorks.Forms.FormChooseColumns.resources" />
+    <EmbeddedResource Include="DMEWorks.Forms.FormSelector.resources" />
+    <EmbeddedResource Include="DMEWorks.Forms.Printing.FormPrintPreview.resources" />
+    <EmbeddedResource Include="DMEWorks.Forms.Printing.ImageSetupDialog.resources" />
+    <EmbeddedResource Include="DMEWorks.Forms.DialogBackgroundWorker.resources" />
+    <EmbeddedResource Include="DMEWorks.Forms.SearchableGrid.resources" />
+    <EmbeddedResource Include="DMEWorks.Forms.FilteredGrid.resources" />
+    <EmbeddedResource Include="DMEWorks.Forms.GridBase.resources" />
+    <EmbeddedResource Include="DMEWorks.Forms.Properties.Resources.resources" />
+  </ItemGroup>
+</Project>

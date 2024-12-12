@@ -1,0 +1,31 @@
+﻿namespace DevExpress.Printing.Native.PrintEditor
+{
+    using System;
+
+    public enum PrinterEnumFlags
+    {
+        PRINTER_ENUM_DEFAULT = 1,
+        PRINTER_ENUM_LOCAL = 2,
+        PRINTER_ENUM_CONNECTIONS = 4,
+        PRINTER_ENUM_FAVORITE = 4,
+        PRINTER_ENUM_NAME = 8,
+        PRINTER_ENUM_REMOTE = 0x10,
+        PRINTER_ENUM_SHARED = 0x20,
+        PRINTER_ENUM_NETWORK = 0x40,
+        PRINTER_ENUM_EXPAND = 0x4000,
+        PRINTER_ENUM_CONTAINER = 0x8000,
+        PRINTER_ENUM_ICONMASK = 0xff0000,
+        PRINTER_ENUM_ICON1 = 0x10000,
+        PRINTER_ENUM_ICON2 = 0x20000,
+        PRINTER_ENUM_ICON3 = 0x40000,
+        PRINTER_ENUM_ICON4 = 0x80000,
+        PRINTER_ENUM_ICON5 = 0x100000,
+        PRINTER_ENUM_ICON6 = 0x200000,
+        PRINTER_ENUM_ICON7 = 0x400000,
+        PRINTER_ENUM_ICON8 = 0x800000,
+        PRINTER_ENUM_HIDE = 0x1000000,
+        PRINTER_ENUM_CATEGORY_ALL = 0x2000000,
+        PRINTER_ENUM_CATEGORY_3D = 0x4000000
+    }
+}
+
